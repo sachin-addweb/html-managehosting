@@ -1,4 +1,7 @@
 //All styles can be added here.
+body, html {
+  @apply w-full h-full
+}
 .hero-heading {
   @apply mb-10 text-4xl font-medium text-white;
 }
@@ -182,3 +185,52 @@ pre[class*="language-"]::selection {
 .token.variable {
   color: #d6deeb;
 }
+
+// Social links btn
+
+.social-links {
+  button {
+    @apply flex justify-center items-center px-5 py-3 rounded-md text-sm transition-easy;
+
+    &:hover {
+      @apply shadow-shadow-raised-hover
+    }
+  }
+}
+.login-divider {
+  &::before ,
+  &::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid;
+    @apply border-gray-700;
+  }
+  &::after {
+    margin-left: 10px;
+  }
+  &::before {
+    margin-right: 10px;
+  }
+}
+.btn {
+  @apply min-w-140 text-sm px-5 py-3.5 text-white rounded-sm font-bold;
+  &.btn-primary {
+    @apply bg-primery-normal border-primery-normal
+   }
+   &.btn-link {
+    @apply text-primery-normal;
+      &:hover {
+        @apply underline text-primery-bold
+      }
+   }
+}
+.form-controls {
+  @apply border-secondary-textbox-border px-4 py-3;
+  
+  &:focus {
+    @apply outline-none border-primery-normal;
+  }
+}
+
+
+

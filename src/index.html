@@ -1,107 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Gulp with TailwindCSS v3</title>
-    <link rel="stylesheet" type="text/css" href="./css/style.css" />
-  </head>
-  <body class="bg-gray-50">
-    <div
-      class="bg-gradient-to-r  from-cyan-500 to-blue-500  px-20 pb-44 pt-20 text-center"
-    >
-      <h1 class="hero-heading">
-        <a href="./" class="text-inherit no-underline"
-          >Gulp with TailwindCSS v3 Kit</a
-        >
-      </h1>
-      <p class="mb-10 w-full text-center text-xl leading-5 text-white">
-        Updated with Tailwind v3.3, PostCSS v8.0+
-      </p>
 
-      <div class="space-x-3">
-        <a
-          class="rounded-full border border-white/40 bg-white/40 px-5 py-2 text-sm font-medium text-white hover:bg-white/50 focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/50 active:bg-white/70 dark:border-slate-700 dark:bg-slate-900 dark:hover:bg-slate-800"
-          href="https://gulp-with-tailwindcss.com/"
-          target="_blank"
-          >Documentation</a
-        >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Managehosting</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="assets/css/styles.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="./css/style.css" />
+</head>
 
-        <a
-          class="rounded-full border border-white/40 bg-white/40 px-5 py-2 text-sm font-medium text-white hover:bg-white/50 focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/50 active:bg-white/70 dark:border-slate-700 dark:bg-slate-900 dark:hover:bg-slate-800"
-          href="https://github.com/lazymozek/gulp-with-tailwindcss"
-          target="_blank"
-          >Github</a
-        >
+<body class="bg-gray-50">
+  <header class="sticky">
+    <nav class="bg-white shadow-shadow-nav border-b-gray-600">
+      <div class="max-w-full px-4">
+        <div class="flex justify-between w-full">
+          <div>
+            <a href="#" class="flex items-center py-3 hover_opacity-75">
+              <img src="./img/logo-dark.svg" alt="" class="w-36">
+              <img src="" alt="">
+            </a>
+          </div>
+          <!-- Primary Navbar items -->
+          <div class=" w-full pl-4">
+            <ul class="flex items-center justify-end h-full border-l-2">
+              <li class="mr-3">
+                <a href="" class="text-sm text-slate-400 hover_text-primery-normal">Login</a>
+              </li>
+              <li>
+                <a href="" class="text-sm text-slate-400 hover_text-primery-normal">Sign
+                  Up</a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="container">
+      <div class="flex flex-col items-center justify-center w-full max-w-xl mx-auto py-10">
+        <h2 class="text-2xl text-text-900 mb-6 text-center">Login</h2>
+        <p class="text-text-500 mb-4 text-center text-sm">
+          Login using a social account</p>
+        <div class="social-links grid md_grid-cols-3 gap-4 w-full mb-3">
+          <button
+            class="bg-ternary-white border-ternary-light-pink text-secondary-dark border rounded-md text-sm hover_bg-ternary-lighter-pink">
+            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M3.9309 9.5997C3.9309 8.98999 4.03217 8.40546 4.2129 7.85719L1.04938 5.44141C0.432822 6.69325 0.0854492 8.10381 0.0854492 9.5997C0.0854492 11.0943 0.432395 12.504 1.04809 13.755L4.20991 11.3345C4.03089 10.7888 3.9309 10.2064 3.9309 9.5997Z"
+                fill="#FBBC05"></path>
+              <path
+                d="M9.48539 4.05484C10.8099 4.05484 12.0063 4.52418 12.9463 5.29218L15.6808 2.56151C14.0145 1.11084 11.8781 0.214844 9.48539 0.214844C5.77068 0.214844 2.5781 2.33922 1.04932 5.44322L4.21284 7.859C4.94177 5.64631 7.0196 4.05484 9.48539 4.05484Z"
+                fill="#EA4335"></path>
+              <path
+                d="M9.48539 15.1479C7.0196 15.1479 4.94177 13.5564 4.21284 11.3438L1.04932 13.7591C2.5781 16.8635 5.77068 18.9879 9.48539 18.9879C11.7781 18.9879 13.9671 18.1738 15.6099 16.6485L12.607 14.327C11.7598 14.8608 10.6929 15.1479 9.48539 15.1479Z"
+                fill="#34A853"></path>
+              <path
+                d="M18.4581 9.6012C18.4581 9.04653 18.3726 8.4492 18.2444 7.89453H9.48535V11.5212H14.5272C14.2751 12.7577 13.5889 13.7083 12.607 14.327L15.6099 16.6485C17.3356 15.0467 18.4581 12.6608 18.4581 9.6012Z"
+                fill="#4285F4"></path>
+            </svg>
+            <span class="ml-2">Google</span>
+          </button>
+          <button class="bg-black text-white hover_bg-text-400">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M9.99938 0C4.4775 0 0 4.49462 0 10.0403C0 14.4753 2.865 18.2383 6.83938 19.566C7.33938 19.6582 7.52187 19.3483 7.52187 19.0822C7.52187 18.8438 7.51312 18.2125 7.50812 17.3749C4.72625 17.9816 4.13938 16.0289 4.13938 16.0289C3.685 14.8693 3.02938 14.5606 3.02938 14.5606C2.12125 13.9375 3.09812 13.9501 3.09812 13.9501C4.10125 14.021 4.62937 14.9848 4.62937 14.9848C5.52187 16.519 6.97 16.076 7.54 15.8187C7.63062 15.1699 7.88938 14.7275 8.175 14.4765C5.95438 14.223 3.62 13.3621 3.62 9.51507C3.62 8.41887 4.00938 7.52283 4.64937 6.82068C4.54625 6.56655 4.20312 5.54627 4.74687 4.16394C4.74687 4.16394 5.58687 3.89413 7.49687 5.193C8.295 4.97025 9.15 4.85919 10.0006 4.85479C10.85 4.85919 11.7056 4.97025 12.5044 5.193C14.4131 3.89413 15.2513 4.16394 15.2513 4.16394C15.7969 5.54627 15.4537 6.56655 15.3506 6.82068C15.9919 7.52283 16.3787 8.41887 16.3787 9.51507C16.3787 13.3715 14.0406 14.2205 11.8131 14.469C12.1719 14.779 12.4919 15.3914 12.4919 16.3282C12.4919 17.6704 12.4794 18.7528 12.4794 19.0822C12.4794 19.3508 12.6594 19.6633 13.1669 19.5648C17.1375 18.2345 20 14.474 20 10.0403C20 4.49462 15.5225 0 9.99938 0Z"
+                fill="white"></path>
+            </svg>
+            <span class="ml-2">Github</span>
+          </button>
+          <button class="text-white bg-secondary-blue border-secondary-blue hover_bg-secondary-dark-bule">
+            <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M17.9442 3.98749C17.9569 4.16248 17.9569 4.33751 17.9569 4.5125C17.9569 9.84997 13.8326 16 6.29444 16C3.97209 16 1.81473 15.3375 0 14.1875C0.329962 14.225 0.64719 14.2375 0.989848 14.2375C2.90607 14.2375 4.67006 13.6 6.0787 12.5125C4.27666 12.475 2.76649 11.3125 2.24618 9.7125C2.50001 9.74997 2.7538 9.77498 3.02032 9.77498C3.38833 9.77498 3.75638 9.72497 4.099 9.63751C2.22083 9.26248 0.812152 7.63749 0.812152 5.67499V5.62501C1.35782 5.92501 1.99239 6.11251 2.66493 6.13748C1.56087 5.41247 0.837542 4.17498 0.837542 2.77497C0.837542 2.02499 1.04055 1.33749 1.3959 0.737481C3.41369 3.18748 6.4467 4.78745 9.84769 4.96248C9.78426 4.66248 9.74617 4.35001 9.74617 4.03751C9.74617 1.81248 11.5736 0 13.8452 0C15.0254 0 16.0914 0.487499 16.8401 1.275C17.7665 1.10001 18.6548 0.762491 19.4416 0.300002C19.137 1.23752 18.4898 2.02502 17.6396 2.52499C18.4645 2.43753 19.264 2.21248 20 1.90001C19.4417 2.69998 18.7437 3.41245 17.9442 3.98749Z"
+                fill="white"></path>
+            </svg>
+            <span class="ml-2">Twitter</span>
+          </button>
+        </div>
+        <div class="login-divider text-text-500 flex items-center text-center my-4 w-full">
+          Or
+        </div>
+        <form action="" class="w-full max-w-xl">
+          <div class="mb-6 flex flex-wrap">
+            <div class="mb-6 w-full md:w-full">
+              <label for="username" class="block mb-2 tracking-wide text-xs text-text-700">Email Address</label>
+              <input type="text" type="email" name="email" value="" placeholder="user@example.com" required="required" autofocus="autofocus"
+                class="block w-full px-3 py-3 border border-gray-400 rounded-md bg-white appearance-none  text-gray-900 font-sm form-controls"
+                />
+            </div>
+            <div class="mb-6 w-full md:w-full">
+              <label for="password" class="block mb-2 tracking-wide text-xs text-text-700">password</label>
+              <input type="password" type="password" name="password" placeholder="********" required="required"
+                class="block w-full px-3 py-3 border border-gray-400 rounded-md bg-white appearance-none text-gray-900 font-sm form-controls"
+                />
+            </div>
+            <div class="mb-6 w-full md:w-full">
+              <button
+                class="block btn btn-primary w-full btn">Login</button>
+            </div>
+          </div>
+          <a href="" class="text-center  block btn btn-link">Forgot password?</a>
+        </form>
       </div>
     </div>
-    <div
-      class="mx-auto -mt-32 mb-24 max-w-3xl rounded-lg bg-white p-10 shadow-lg"
-    >
-      <div
-        class="prose-headings:font-display prose prose-slate max-w-full py-0.5 dark:prose-invert prose-headings:scroll-mt-28 prose-headings:font-normal prose-a:font-medium prose-a:text-rose-400 prose-a:no-underline prose-a:underline-offset-2 hover:prose-a:underline prose-pre:rounded-xl prose-pre:bg-slate-900 prose-pre:shadow-lg prose-lead:text-slate-500 dark:text-slate-400 dark:[--tw-prose-background:theme(colors.slate.900)] dark:prose-pre:bg-slate-800/60 dark:prose-pre:shadow-none dark:prose-pre:ring-1 dark:prose-pre:ring-slate-300/10 dark:prose-hr:border-slate-800 dark:prose-lead:text-slate-400 lg:prose-headings:scroll-mt-[8.5rem] [&_.inline-tick]:rounded-md [&_.inline-tick]:bg-slate-300/50 [&_.inline-tick]:px-1.5 [&_.inline-tick]:font-mono [&_.inline-tick]:text-sm [&_.inline-tick]:font-light [&_.inline-tick]:before:hidden [&_.inline-tick]:after:hidden dark:[&_.inline-tick]:bg-slate-600/50"
-      >
-        <img
-          class="rounded shadow transition-shadow duration-500 hover:shadow-lg"
-          src="img/cover.jpg"
-          alt="Gulp with TailwindCSS"
-        />
-
-        <h3>Features</h3>
-        <ul>
-          <li>
-            Easy configuration using
-            <span class="inline-tick">config.js</span>
-          </li>
-          <li>Live reload on file/assets changes using browser-sync</li>
-          <li>SCSS support with auto purge css</li>
-          <li>Minification of styles and scripts on production build</li>
-          <li>
-            Minification of images on production build using
-            <span class="inline-tick">imagemin</span>
-          </li>
-          <li>
-            Includes following tailwindcss plugins (can be disabled/enabled with
-            <span class="inline-tick">config.js</span>)
-          </li>
-          <ul>
-            <li>
-              <a
-                target="_blank"
-                href="https://github.com/tailwindlabs/tailwindcss-forms"
-                >@tailwindcss/forms</a
-              >
-            </li>
-            <li>
-              <a
-                target="_blank"
-                href="https://tailwindcss.com/docs/typography-plugin"
-                >@tailwindcss/typography</a
-              >
-            </li>
-            <li>
-              <a
-                target="_blank"
-                href="https://github.com/tailwindlabs/tailwindcss-container-queries"
-                >@tailwindcss/container-queries</a
-              >
-            </li>
-            <li>
-              <span class="line-through">
-                <a
-                  target="_blank"
-                  href="https://github.com/tailwindlabs/tailwindcss-line-clamp"
-                  >@tailwindcss/line-clamp</a
-                >
-              </span>
-              - Added by default in Tailwind v3.3 release
-            </li>
-          </ul>
-        </ul>
-      </div>
+    <div>
     </div>
+  </main>
 
-    <script src="./js/scripts.js"></script>
-  </body>
+  <script src="./js/scripts.js"></script>
+</body>
+
 </html>
