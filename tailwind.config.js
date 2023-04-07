@@ -50,7 +50,7 @@ module.exports = {
           yellow: colors.amber,
           pink: colors.fuchsia,
           primery: {
-            normal: '#ee5372',
+            normal: '#037EE6',
             darker: '#d2506d',
             darkest: '#e83157',
             lighter: '#fed7de',
