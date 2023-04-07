@@ -218,9 +218,9 @@ pre[class*="language-"]::selection {
     @apply bg-primery-normal border-primery-normal
    }
    &.btn-link {
-    @apply text-primery-normal;
+    @apply text-primery-normal p-0;
       &:hover {
-        @apply underline text-primery-bold
+        @apply underline text-gray-900
       }
    }
 }
