@@ -213,22 +213,75 @@ pre[class*="language-"]::selection {
   }
 }
 .btn {
-  @apply min-w-140 text-sm px-5 py-3.5 text-white rounded-sm font-bold;
+  @apply min-w-120 text-sm px-5 py-3.5 text-white rounded-round font-bold;
   &.btn-primary {
-    @apply bg-primery-normal border-primery-normal
+    @apply bg-primary-blue border-primary-blue ;
+    &:hover {
+      @apply shadow-lg
+    }
    }
    &.btn-link {
-    @apply text-primery-normal p-0;
+    @apply text-secondary-black-shade-1 p-0;
       &:hover {
-        @apply underline text-gray-900
+        @apply underline text-gray-900 text-primary-blue
       }
    }
+   &.btn-outline {
+    @apply bg-transparent border-primary-blue text-primary-blue border;
+    &:hover {
+      @apply shadow-md
+    }
+   }
 }
-.form-controls {
-  @apply border-secondary-textbox-border px-4 py-3;
+.form-controls ,
+.select-dropdown {
+  @apply bg-transparent rounded-none border-1 border-t-0 border-x-0 border-secondary-black-shade-1 block w-full text-gray-900 py-1.5 px-3;
   
   &:focus {
-    @apply outline-none border-primery-normal;
+    @apply outline-none border-primary-blue;
+  }
+}
+.textareas {
+  @apply bg-transparent rounded-sm border-1 border-secondary-black-shade-1  block w-full text-gray-900 py-1.5 px-3;
+  
+  &:focus {
+    @apply outline-none border-primary-blue;
+  }
+}
+.form-check ,
+.form-radio {
+  @apply w-5 h-5 mr-1.5;
+
+  &:checked {
+    @apply bg-primary-blue border-primary-blue appearance-none
+  }
+}
+.form-check {
+  &:checked {
+    @apply bg-checkbox
+  }
+}
+.form-radio {
+  @apply rounded-full;
+  &:checked {
+    @apply bg-radio;
+  }
+}
+.form-toggle {
+  @apply mr-1.5;
+  @apply h-4 w-9 bg-circle rounded-60 appearance-none bg-no-repeat	bg-left-center border-1 p-1.5 ;
+  &:checked {
+    @apply bg-primary-blue border-primary-blue bg-right-center bg-white-circle;
+  }
+  &:hover:not(:disabled) {
+    &:not(:checked) {
+      @apply bg-blue-circle border-primary-blue
+    }
+  }
+}
+.header {
+  nav {
+    @apply border-1 border-t-0 border-x-0 border-secondary-black-shade-1 
   }
 }
 
