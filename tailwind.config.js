@@ -25,6 +25,10 @@ module.exports = {
         center: true,
         padding: '15px',
       },
+      fontFamily : {
+        'heading' : ["Lato"] ,
+        'pera' : ["Fira Sans"],
+      },
       maxHeight: (theme) => ({
         ...theme('spacing'),
         55: '55px',
