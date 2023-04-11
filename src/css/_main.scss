@@ -281,7 +281,7 @@ pre[class*="language-"]::selection {
 }
 .header {
   nav {
-    @apply border-1 border-t-0 border-x-0 border-secondary-black-shade-1 
+    @apply  shadow-md
   }
 }
 
