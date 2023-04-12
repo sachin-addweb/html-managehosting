@@ -1,11 +1,13 @@
 //All styles can be added here.
-body, html {
+body,
+html {
   @apply w-full h-full
 }
 
 p {
   @apply font-pera
 }
+
 button {
   @apply font-heading font-semibold
 }
@@ -21,58 +23,72 @@ button {
     }
   }
 }
+
 .login-divider {
-  &::before ,
+
+  &::before,
   &::after {
     content: "";
     flex: 1;
     border-bottom: 1px solid;
     @apply border-gray-700;
   }
+
   &::after {
     margin-left: 10px;
   }
+
   &::before {
     margin-right: 10px;
   }
 }
+
 .btn {
   @apply min-w-120 text-sm px-5 py-3.5 text-white rounded-round font-bold font-heading;
+
   &.btn-primary {
-    @apply bg-primary-blue border-primary-blue ;
+    @apply bg-primary-blue border-primary-blue;
+
     &:hover {
       @apply shadow-lg
     }
-   }
-   &.btn-link {
+  }
+
+  &.btn-link {
     @apply text-secondary-black-shade-1 p-0 font-pera font-normal;
-      &:hover {
-        @apply underline text-gray-900 text-primary-blue
-      }
-   }
-   &.btn-outline {
+
+    &:hover {
+      @apply underline text-gray-900 text-primary-blue
+    }
+  }
+
+  &.btn-outline {
     @apply bg-transparent border-primary-blue text-primary-blue border;
+
     &:hover {
       @apply shadow-md
     }
-   }
+  }
 }
-.form-controls ,
+
+.form-controls,
 .select-dropdown {
   @apply bg-transparent rounded-none border-1 border-t-0 border-x-0 border-secondary-black-shade-1 block w-full text-gray-900 py-1.5 px-3;
-  
+
   &:focus {
     @apply outline-none border-primary-blue;
   }
 }
+
 .textareas {
-  @apply bg-transparent rounded-sm border-1 border-secondary-black-shade-1  block w-full text-gray-900 py-1.5 px-3;
-  
+  @apply bg-transparent rounded-sm border-1 border-secondary-black-shade-1 block w-full text-gray-900 py-1.5 px-3;
+
   &:focus {
     @apply outline-none border-primary-blue;
   }
 }
-.form-check ,
+
+.form-check,
 .form-radio {
   @apply w-5 h-5 mr-1.5 font-heading;
 
@@ -80,34 +96,89 @@ button {
     @apply bg-primary-blue border-primary-blue appearance-none
   }
 }
+
 .form-check {
   &:checked {
     @apply bg-checkbox
   }
 }
+
 .form-radio {
   @apply rounded-full;
+
   &:checked {
     @apply bg-radio;
   }
 }
+
 .form-toggle {
   @apply mr-1.5;
-  @apply h-4 w-9 bg-circle rounded-60 appearance-none bg-no-repeat	bg-left-center border-1 p-1.5 ;
+  @apply h-4 w-9 bg-circle rounded-60 appearance-none bg-no-repeat bg-left-center border-1 p-1.5;
+
   &:checked {
     @apply bg-primary-blue border-primary-blue bg-right-center bg-white-circle;
   }
+
   &:hover:not(:disabled) {
     &:not(:checked) {
       @apply bg-blue-circle border-primary-blue
     }
   }
 }
+
 .header {
   nav {
-    @apply  shadow-md font-heading 
+    @apply shadow-md font-heading;
+
+    .header-wrapper {
+      @apply flex justify-between w-full items-center;
+    }
+
+    .login-menu {
+      @apply flex items-center justify-end h-full;
+
+      .nav-link {
+        @apply text-sm text-secondary-black font-heading font-semibold;
+
+        &:hover {
+          @apply text-primary-blue
+        }
+      }
+    }
   }
 }
 
+.login-resetpwd-form {
+  @apply flex flex-col items-center justify-center w-full max-w-xl mx-auto py-10;
+}
 
+.login-form-heading {
+  @apply text-2xl text-text-900 mb-6 text-center;
+}
 
+.btn-google {
+  @apply bg-ternary-white border-ternary-light-pink text-secondary-black border rounded-md text-sm;
+
+  &:hover {
+    @apply bg-ternary-lighter-pink;
+  }
+}
+
+.btn-github {
+  @apply bg-black text-white;
+
+  &:hover {
+    @apply bg-text-400
+  }
+}
+
+.btn-twitter {
+  @apply text-white bg-primary-blue-shade-5 border-primary-blue-shade-5;
+
+  &:hover {
+    @apply bg-primary-blue-shade-3
+  }
+}
+.divider-option {
+  @apply login-divider text-text-500 flex items-center text-center my-7 w-full;
+}

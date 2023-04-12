@@ -17,7 +17,7 @@
   <header class="sticky header">
     <nav>
       <div class="container">
-        <div class="flex justify-between w-full">
+        <div class="header-wrapper">
           <div>
             <a href="#" class="flex items-center py-3 hover_opacity-75">
               <img src="./img/addweblogo.svg" alt="homedesktoplogo" class="sm_block hidden" width="250" height="40">
@@ -26,13 +26,13 @@
             </a>
           </div>
           <!-- Primary Navbar items -->
-          <div class=" w-full">
+          <div class=" w-full login-menu">
             <ul class="flex items-center justify-end h-full">
               <li class="mr-3">
-                <a href="" class="text-sm text-secondary-black hover_text-primary-blue font-heading font-semibold">Login</a>
+                <a href="" class="nav-link">Login</a>
               </li>
               <li>
-                <a href="" class="text-sm text-secondary-black hover_text-primary-blue font-heading font-semibold">Sign
+                <a href="" class="nav-link">Sign
                   Up</a>
               </li>
             </ul>
@@ -43,8 +43,8 @@
   </header>
   <main>
     <div class="container">
-      <div class="flex flex-col items-center justify-center w-full max-w-xl mx-auto py-10">
-        <h2 class="text-2xl text-text-900 mb-6 text-center">Login</h2>
+      <div class="login-resetpwd-form">
+        <h2 class="login-form-heading ">Login</h2>
         <form action="" class="w-full max-w-xl">
           <div class="flex flex-wrap">
             <div class="mb-6 w-full md:w-full">
@@ -56,18 +56,17 @@
               <input type="password" type="password" name="password" placeholder="********" required="required"
                 class="form-controls" />
             </div>
-            <div class="mb-6 w-full md:w-full">
+            <div class="mb-6 mt-2 w-full md:w-full">
               <button class="block btn btn-primary w-full btn">Login</button>
             </div>
           </div>
           <a href="./forgotpassword.html" class="text-center block btn btn-link font-pera">Forgot password?</a>
         </form>
-        <div class="login-divider text-text-500 flex items-center text-center my-7 w-full">
+        <div class=" divider-option">
           Or
         </div>
         <div class="social-links grid md_grid-cols-3 gap-4 w-full mb-3">
-          <button
-            class="bg-ternary-white border-ternary-light-pink text-secondary-dark border rounded-md text-sm hover_bg-ternary-lighter-pink">
+          <button class="btn-google">
             <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M3.9309 9.5997C3.9309 8.98999 4.03217 8.40546 4.2129 7.85719L1.04938 5.44141C0.432822 6.69325 0.0854492 8.10381 0.0854492 9.5997C0.0854492 11.0943 0.432395 12.504 1.04809 13.755L4.20991 11.3345C4.03089 10.7888 3.9309 10.2064 3.9309 9.5997Z"
@@ -84,7 +83,7 @@
             </svg>
             <span class="ml-2">Google</span>
           </button>
-          <button class="bg-black text-white hover_bg-text-400">
+          <button class="btn-github">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M9.99938 0C4.4775 0 0 4.49462 0 10.0403C0 14.4753 2.865 18.2383 6.83938 19.566C7.33938 19.6582 7.52187 19.3483 7.52187 19.0822C7.52187 18.8438 7.51312 18.2125 7.50812 17.3749C4.72625 17.9816 4.13938 16.0289 4.13938 16.0289C3.685 14.8693 3.02938 14.5606 3.02938 14.5606C2.12125 13.9375 3.09812 13.9501 3.09812 13.9501C4.10125 14.021 4.62937 14.9848 4.62937 14.9848C5.52187 16.519 6.97 16.076 7.54 15.8187C7.63062 15.1699 7.88938 14.7275 8.175 14.4765C5.95438 14.223 3.62 13.3621 3.62 9.51507C3.62 8.41887 4.00938 7.52283 4.64937 6.82068C4.54625 6.56655 4.20312 5.54627 4.74687 4.16394C4.74687 4.16394 5.58687 3.89413 7.49687 5.193C8.295 4.97025 9.15 4.85919 10.0006 4.85479C10.85 4.85919 11.7056 4.97025 12.5044 5.193C14.4131 3.89413 15.2513 4.16394 15.2513 4.16394C15.7969 5.54627 15.4537 6.56655 15.3506 6.82068C15.9919 7.52283 16.3787 8.41887 16.3787 9.51507C16.3787 13.3715 14.0406 14.2205 11.8131 14.469C12.1719 14.779 12.4919 15.3914 12.4919 16.3282C12.4919 17.6704 12.4794 18.7528 12.4794 19.0822C12.4794 19.3508 12.6594 19.6633 13.1669 19.5648C17.1375 18.2345 20 14.474 20 10.0403C20 4.49462 15.5225 0 9.99938 0Z"
@@ -92,7 +91,7 @@
             </svg>
             <span class="ml-2">Github</span>
           </button>
-          <button class="text-white bg-primary-blue-shade-5 border-primary-blue-shade-5 hover_bg-primary-blue-shade-3">
+          <button class="btn-twitter">
             <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M17.9442 3.98749C17.9569 4.16248 17.9569 4.33751 17.9569 4.5125C17.9569 9.84997 13.8326 16 6.29444 16C3.97209 16 1.81473 15.3375 0 14.1875C0.329962 14.225 0.64719 14.2375 0.989848 14.2375C2.90607 14.2375 4.67006 13.6 6.0787 12.5125C4.27666 12.475 2.76649 11.3125 2.24618 9.7125C2.50001 9.74997 2.7538 9.77498 3.02032 9.77498C3.38833 9.77498 3.75638 9.72497 4.099 9.63751C2.22083 9.26248 0.812152 7.63749 0.812152 5.67499V5.62501C1.35782 5.92501 1.99239 6.11251 2.66493 6.13748C1.56087 5.41247 0.837542 4.17498 0.837542 2.77497C0.837542 2.02499 1.04055 1.33749 1.3959 0.737481C3.41369 3.18748 6.4467 4.78745 9.84769 4.96248C9.78426 4.66248 9.74617 4.35001 9.74617 4.03751C9.74617 1.81248 11.5736 0 13.8452 0C15.0254 0 16.0914 0.487499 16.8401 1.275C17.7665 1.10001 18.6548 0.762491 19.4416 0.300002C19.137 1.23752 18.4898 2.02502 17.6396 2.52499C18.4645 2.43753 19.264 2.21248 20 1.90001C19.4417 2.69998 18.7437 3.41245 17.9442 3.98749Z"
