@@ -5,7 +5,7 @@ html {
 }
 
 p {
-  @apply font-pera
+  @apply font-pera text-base;
 }
 
 button {
@@ -72,21 +72,15 @@ button {
 }
 
 .form-controls,
-.select-dropdown {
-  @apply bg-transparent rounded-none border-1 border-t-0 border-x-0 border-secondary-black-shade-1 block w-full text-gray-900 py-1.5 px-3;
-
-  &:focus {
-    @apply outline-none border-primary-blue;
-  }
-}
-
+.select-dropdown,
 .textareas {
-  @apply bg-transparent rounded-sm border-1 border-secondary-black-shade-1 block w-full text-gray-900 py-1.5 px-3;
+  @apply bg-transparent border-1 rounded-md border-secondary-black-shade-1 block w-full text-secondary-black-shade-1 py-3 px-2;
 
   &:focus {
     @apply outline-none border-primary-blue;
   }
 }
+
 
 .form-check,
 .form-radio {
@@ -126,30 +120,32 @@ button {
   }
 }
 
-.header {
-  nav {
-    @apply shadow-md font-heading;
+// .header {
+//   nav {
+//     @apply shadow-md font-heading;
 
-    .header-wrapper {
-      @apply flex justify-between w-full items-center;
-    }
+//     .header-wrapper {
+//       @apply flex justify-between w-full items-center;
+//     }
 
-    .login-menu {
-      @apply flex items-center justify-end h-full;
+//     .login-menu {
+//       @apply flex items-center justify-end h-full;
 
-      .nav-link {
-        @apply text-sm text-secondary-black font-heading font-semibold;
+//       .nav-link {
+//         @apply text-sm text-secondary-black font-heading font-semibold;
 
-        &:hover {
-          @apply text-primary-blue
-        }
-      }
-    }
-  }
+//         &:hover {
+//           @apply text-primary-blue
+//         }
+//       }
+//     }
+//   }
+// }
+.login-resetpwd-form-wrapper {
+  @apply min-h-screen  flex flex-col items-center justify-center;
 }
-
 .login-resetpwd-form {
-  @apply flex flex-col items-center justify-center w-full max-w-xl mx-auto py-10;
+  @apply w-full max-w-xl mx-auto p-10  bg-white shadow-lg h-full rounded-xl;
 }
 
 .login-form-heading {
@@ -179,6 +175,50 @@ button {
     @apply bg-primary-blue-shade-3
   }
 }
+
 .divider-option {
   @apply login-divider text-text-500 flex items-center text-center my-7 w-full;
+}
+.sign-up-link {
+  @apply text-secondary-black-shade-6 font-semibold font-heading text-center ;
+  
+}
+// Header design after login
+
+.header-with-cintebnt-wrapper {
+  @apply flex h-full items-center;
+}
+
+.main-header {
+  @apply bg-white shadow-xl h-full p-6;
+
+  .site_branding {
+
+    @apply mb-7;
+
+    a {
+      @apply flex items-center py-3;
+
+      &:hover {
+        @apply opacity-75;
+      }
+    }
+  }
+}
+
+.navigation-menu {
+  @apply mb-8; 
+
+  .menu-heading {
+    @apply font-pera text-secondary-black mb-3 text-base;
+  }
+  .nav-link {
+    @apply font-heading text-sm flex items-center mb-4 font-medium text-secondary-black-shade-1; 
+    span {
+      @apply ml-3;
+    }
+    &:hover {
+      @apply text-primary-blue;
+    }
+  }
 }
