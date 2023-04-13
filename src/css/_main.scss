@@ -295,7 +295,7 @@ button {
       }
 
       .view-btn-wrapper {
-        @apply small-desktop_flex small-desktop_items-center hidden;
+        @layer small-desktop_flex small-desktop_items-center hidden;
 
         .view-btn {
           @apply w-10 h-10 border-1 border-secondary-black-shade-1 mr-2 flex justify-center items-center;
