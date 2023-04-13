@@ -44,7 +44,7 @@ button {
 }
 
 .btn {
-  @apply min-w-120 text-sm px-5 py-3.5 text-white rounded-round font-bold font-heading;
+  @apply min-w-120 text-base px-5 py-3.5 text-white rounded-round font-bold font-heading text-center;
 
   &.btn-primary {
     @apply bg-primary-blue border-primary-blue;
@@ -254,7 +254,7 @@ button {
       @apply flex items-center;
 
       .hamburger {
-        @apply mr-8;
+        @apply mr-4;
 
         .toggle-btn {
           @apply relative;
@@ -286,7 +286,7 @@ button {
 }
 
 .dashboard-grid-view {
-  @apply p-6;
+  @apply px-4 py-6;
 
   .page-heading-wrapper {
     @apply flex justify-between items-center mb-8;
