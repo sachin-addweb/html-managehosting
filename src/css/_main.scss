@@ -44,7 +44,7 @@ button {
 }
 
 .btn {
-  @apply min-w-120 text-base px-5 py-3.5 text-white rounded-round font-bold font-heading text-center;
+  @apply min-w-120 text-base px-5 py-3.5 text-white rounded-round font-bold font-heading text-center inline-block;
 
   &.btn-primary {
     @apply bg-primary-blue border-primary-blue;
@@ -193,11 +193,11 @@ button {
 }
 
 .main-header {
-  @apply bg-white shadow-xl h-full w-300 p-6 fixed;
+  @apply bg-white shadow-xl h-full w-300 p-6 fixed lg_block hidden lg_z-0 z-50;
 
   .site_branding {
 
-    @apply mb-7 flex items-center;
+    @apply mb-7 flex items-center justify-between;
 
     a {
       @apply flex items-center py-3;
@@ -206,11 +206,14 @@ button {
         @apply opacity-75;
       }
     }
+    .hamburger {
+      @apply ms-4;
+    }
 
   }
 
   &.menu-container--open {
-    @apply hidden;
+    @apply lg_hidden block;
   }
 }
 
@@ -237,10 +240,10 @@ button {
 // Sub inner menu 
 
 .main-content {
-  @apply w-w-calc-300 ms-300 transition-all;
+  @apply lg_w-w-calc-300 lg_ms-300 transition-all w-full;
 
   &.main-content--open {
-    @apply w-full ms-0 transition-all;
+    @apply w-full ms-0 transition-all  ;
   }
 }
 
@@ -271,7 +274,7 @@ button {
     }
 
     .search-input-box {
-      @apply w-full max-w-xs bg-white rounded-md transition-all relative flex items-center;
+      @apply w-full max-w-xs bg-white rounded-md transition-all relative md_flex md_items-center hidden;
     }
 
     .search-input-box,
@@ -289,13 +292,13 @@ button {
   @apply px-4 py-6;
 
   .page-heading-wrapper {
-    @apply flex justify-between items-center mb-8;
+    @apply flex justify-between mobile_items-center items-start mb-8 mobile_flex-row flex-col;
 
     .page-view-wrapper {
       @apply flex items-center;
 
       h1 {
-        @apply mr-4 font-heading font-semibold text-xl text-secondary-black-shade-1;
+        @apply mobile_mr-4 mr-0 font-heading font-semibold text-xl text-secondary-black-shade-1 mobile_mb-0 mb-4;
       }
 
       .view-btn-wrapper {
@@ -311,6 +314,9 @@ button {
           }
         }
       }
+    }
+    .btn-primary {
+      @apply mobile_inline-block block;
     }
   }
 }
@@ -332,9 +338,10 @@ button {
     @apply p-5 border-b-1 border-text-light;
 
     .card-header-wrapper {
-      @apply flex justify-between items-center;
+      @apply flex justify-between small-mobile_items-center items-start small-mobile_flex-row flex-col;
 
       .server-data-link {
+        @apply small-mobile_mb-0 mb-5;
         .server-hoverd-data {
           @apply opacity-0 transition-all text-secondary-black-shade-6 h-0 flex items-center font-normal text-sm;
 
@@ -370,8 +377,11 @@ button {
   }
 }
 
+.table-responsive {
+  @apply overflow-x-auto w-full;
+}
 .site-table-list {
-  @apply w-full;
+  @apply w-full overflow-x-auto;
 
   thead {
     @apply bg-secondary-white-shade-2 border-b-1 border-text-light;
