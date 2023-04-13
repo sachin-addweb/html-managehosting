@@ -318,7 +318,7 @@ button {
 }
 
 .card-table {
-  @apply bg-white border-1 border-text-light shadow-md mb-12 inline-block w-full;
+  @layer bg-white border-1 border-text-light shadow-md mb-12 inline-block w-full;
 
   &:last-child {
     @apply mb-0;
