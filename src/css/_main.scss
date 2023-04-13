@@ -382,7 +382,7 @@ button {
 
   tbody {
     tr {
-      @apply border-b-1 border-text-light;
+      @layer border-b-1 border-text-light;
 
       &:last-child {
         @apply border-0;
