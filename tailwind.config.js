@@ -161,7 +161,11 @@ module.exports = {
         'tablet-potrait': '1280px',
         'tablet': '1024px',
         'mobile': '767px',
-      }
+        'small-mobile' : '576px',
+      },
+      position: {
+        'unset' : 'unset'
+      },
     },
   },
   plugins: [
