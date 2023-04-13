@@ -123,6 +123,7 @@ module.exports = {
           'grey-700': '#dfdfdf',
           'grey-800': '#bbb',
           'grey-900': '#212529',
+          'light' : 'rgba(0,0,0,.125)',
         }
 
       },
@@ -141,13 +142,26 @@ module.exports = {
       minWidth: {
         '120': '120px'
       },
+      width: {
+        '300' : '300px',
+        'w-calc-300' : 'calc(100% - 300px)',
+      },
+      spacing : {
+        '300' : '300px',
+        '54': '235px',
+      },
       transitionProperty: {
         easy: ".3s ease-in-out",
       },
       borderWidth: {
         '1': '1px',
       },
-
+      screens : {
+        'small-desktop' : '1440px',
+        'tablet-potrait': '1280px',
+        'tablet': '1024px',
+        'mobile': '767px',
+      }
     },
   },
   plugins: [

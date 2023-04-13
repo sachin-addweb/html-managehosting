@@ -150,7 +150,7 @@ button {
 }
 
 .login-form-heading {
-  @apply text-2xl text-text-900 mb-6 text-center;
+  @apply text-2xl text-text-900 mb-6 text-center font-pera ;
 }
 
 .btn-google {
@@ -206,21 +206,11 @@ button {
         @apply opacity-75;
       }
     }
-    .hamburger {
-      @apply ms-8;
-      .toggle-btn {
-        @apply relative p-3;
-      }
-    }
-    
+
   }
+
   &.menu-container--open {
-    @apply -ms-56;
-    .hamburger {
-      .menu--open {
-        @apply rotate-180;
-      }
-    }
+    @apply hidden;
   }
 }
 
@@ -248,7 +238,8 @@ button {
 
 .main-content {
   @apply w-w-calc-300 ms-300 transition-all;
-  &.main-content--open {  
+
+  &.main-content--open {
     @apply w-full ms-0 transition-all;
   }
 }
@@ -260,6 +251,20 @@ button {
     @apply flex justify-between items-center;
 
     .breadcrums {
+      @apply flex items-center;
+
+      .hamburger {
+        @apply mr-8;
+
+        .toggle-btn {
+          @apply relative;
+
+          &.menu--open {
+            @apply rotate-180;
+          }
+        }
+      }
+
       a {
         @apply text-secondary-black-shade-6
       }
