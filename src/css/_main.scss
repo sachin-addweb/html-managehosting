@@ -325,7 +325,7 @@ button {
   }
 
   .card-header {
-    @apply p-5 border-b-1 border-text-light;
+    @layer p-5 border-b-1 border-text-light;
 
     .card-header-wrapper {
       @apply flex justify-between items-center;
