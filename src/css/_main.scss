@@ -142,10 +142,11 @@ button {
 //   }
 // }
 .login-resetpwd-form-wrapper {
-  @apply min-h-screen  flex flex-col items-center justify-center;
+  @apply min-h-screen flex flex-col items-center justify-center;
 }
+
 .login-resetpwd-form {
-  @apply w-full max-w-xl mx-auto p-10  bg-white shadow-lg h-full rounded-xl;
+  @apply w-full max-w-xl mx-auto p-10 bg-white shadow-lg h-full rounded-xl;
 }
 
 .login-form-heading {
@@ -179,22 +180,24 @@ button {
 .divider-option {
   @apply login-divider text-text-500 flex items-center text-center my-7 w-full;
 }
+
 .sign-up-link {
-  @apply text-secondary-black-shade-6 font-semibold font-heading text-center ;
-  
+  @apply text-secondary-black-shade-6 font-semibold font-heading text-center;
+
 }
+
 // Header design after login
 
-.header-with-cintebnt-wrapper {
-  @apply flex h-full items-center;
+.header-with-content-wrapper {
+  @apply flex h-full;
 }
 
 .main-header {
-  @apply bg-white shadow-xl h-full p-6;
+  @apply bg-white shadow-xl h-full w-300 p-6 fixed;
 
   .site_branding {
 
-    @apply mb-7;
+    @apply mb-7 flex items-center;
 
     a {
       @apply flex items-center py-3;
@@ -203,22 +206,214 @@ button {
         @apply opacity-75;
       }
     }
+    .hamburger {
+      @apply ms-8;
+      .toggle-btn {
+        @apply relative p-3;
+      }
+    }
+    
+  }
+  &.menu-container--open {
+    @apply -ms-56;
+    .hamburger {
+      .menu--open {
+        @apply rotate-180;
+      }
+    }
   }
 }
 
 .navigation-menu {
-  @apply mb-8; 
+  @apply mb-8;
 
   .menu-heading {
     @apply font-pera text-secondary-black mb-3 text-base;
   }
+
   .nav-link {
-    @apply font-heading text-sm flex items-center mb-4 font-medium text-secondary-black-shade-1; 
+    @apply font-heading text-sm flex items-center mb-4 font-medium text-secondary-black-shade-1;
+
     span {
       @apply ml-3;
     }
+
     &:hover {
       @apply text-primary-blue;
+    }
+  }
+}
+
+// Sub inner menu 
+
+.main-content {
+  @apply w-w-calc-300 ms-300 transition-all;
+  &.main-content--open {  
+    @apply w-full ms-0 transition-all;
+  }
+}
+
+.sub-inner-header {
+  @apply bg-white border-b-1 p-4;
+
+  .inner-menu-wrapper {
+    @apply flex justify-between items-center;
+
+    .breadcrums {
+      a {
+        @apply text-secondary-black-shade-6
+      }
+    }
+
+    .search-input-box {
+      @apply w-full max-w-xs bg-white rounded-md transition-all relative flex items-center;
+    }
+
+    .search-input-box,
+    .events-alert {
+      @apply mr-4;
+    }
+
+    .inner-menu-items {
+      @apply flex items-center;
+    }
+  }
+}
+
+.dashboard-grid-view {
+  @apply p-6;
+
+  .page-heading-wrapper {
+    @apply flex justify-between items-center mb-8;
+
+    .page-view-wrapper {
+      @apply flex items-center;
+
+      h1 {
+        @apply mr-4 font-heading font-semibold text-xl text-secondary-black-shade-1;
+      }
+
+      .view-btn-wrapper {
+        @apply small-desktop_flex small-desktop_items-center hidden;
+
+        .view-btn {
+          @apply w-10 h-10 border-1 border-secondary-black-shade-1 mr-2 flex justify-center items-center;
+
+          &.active,
+          &:hover,
+          &:focus {
+            @apply border-primary-blue fill-primary-blue;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Grid table
+
+.grid-cards-wrapper {
+  @apply small-desktop_columns-2 small-desktop_gap-12 columns-1
+}
+
+.card-table {
+  @apply bg-white border-1 border-text-light shadow-md mb-12 inline-block w-full;
+
+  &:last-child {
+    @apply mb-0;
+  }
+
+  .card-header {
+    @apply p-5 border-b-1 border-text-light;
+
+    .card-header-wrapper {
+      @apply flex justify-between items-center;
+
+      .server-data-link {
+        .server-hoverd-data {
+          @apply opacity-0 transition-all text-secondary-black-shade-6 h-0 flex items-center font-normal text-sm;
+
+          .server-meta-ip,
+          .spinup-provider-icon,
+          .server-meta-os,
+          .server-meta-db,
+          .server-meta-size {
+            @apply mr-3;
+          }
+
+          .server-meta-ip {
+            .tooltip {
+              @apply hidden;
+
+            }
+
+            &:hover {
+              .tooltip {
+                @apply block bg-white p-2 text-primary-blue border-1 border-primary-blue;
+              }
+            }
+          }
+        }
+
+        &:hover {
+          .server-hoverd-data {
+            @apply opacity-100 h-full transition-all;
+          }
+        }
+      }
+    }
+  }
+}
+
+.site-table-list {
+  @apply w-full;
+
+  thead {
+    @apply bg-secondary-white-shade-2 border-b-1 border-text-light;
+
+    tr {
+      th {
+        @apply px-4 py-3 text-xs font-pera text-secondary-black-shade-6 font-semibold text-start;
+
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      @apply border-b-1 border-text-light;
+
+      &:last-child {
+        @apply border-0;
+      }
+
+      td {
+        @apply p-4 text-sm text-secondary-black-shade-6 font-semibold;
+
+        .site-overview {
+          @apply flex items-center justify-end;
+
+          li {
+            @apply mr-4;
+          }
+        }
+      }
+
+      .site-domain {
+        a {
+          @apply text-primary-blue;
+        }
+      }
+
+      .site-status {
+        a {
+          @apply text-center;
+
+          span {
+            @apply border-1 border-primary-blue text-primary-blue rounded-full flex justify-center items-center w-5 h-5;
+          }
+        }
+      }
     }
   }
 }
