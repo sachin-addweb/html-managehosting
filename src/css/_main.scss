@@ -1,1 +1,420 @@
 
+//All styles can be added here.
+body,
+html {
+  @apply w-full h-full
+}
+
+p {
+  @apply font-pera text-base;
+}
+
+button {
+  @apply font-heading font-semibold
+}
+
+// Social links btn
+
+.social-links {
+  button {
+    @apply flex justify-center items-center px-5 py-3 rounded-md text-sm transition-easy;
+
+    &:hover {
+      @apply shadow-shadow-raised-hover
+    }
+  }
+}
+
+.login-divider {
+
+  &::before,
+  &::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid;
+    @apply border-gray-700;
+  }
+
+  &::after {
+    margin-left: 10px;
+  }
+
+  &::before {
+    margin-right: 10px;
+  }
+}
+
+.btn {
+  @apply min-w-120 text-sm px-5 py-3.5 text-white rounded-round font-bold font-heading;
+
+  &.btn-primary {
+    @apply bg-primary-blue border-primary-blue;
+
+    &:hover {
+      @apply shadow-lg
+    }
+  }
+
+  &.btn-link {
+    @apply text-secondary-black-shade-1 p-0 font-pera font-normal;
+
+    &:hover {
+      @apply underline text-gray-900 text-primary-blue
+    }
+  }
+
+  &.btn-outline {
+    @apply bg-transparent border-primary-blue text-primary-blue border;
+
+    &:hover {
+      @apply shadow-md
+    }
+  }
+}
+
+.form-controls,
+.select-dropdown,
+.textareas {
+  @apply bg-transparent border-1 rounded-md border-secondary-black-shade-1 block w-full text-secondary-black-shade-1 py-3 px-2;
+
+  &:focus {
+    @apply outline-none border-primary-blue;
+  }
+}
+
+
+.form-check,
+.form-radio {
+  @apply w-5 h-5 mr-1.5 font-heading;
+
+  &:checked {
+    @apply bg-primary-blue border-primary-blue appearance-none
+  }
+}
+
+.form-check {
+  &:checked {
+    @apply bg-checkbox
+  }
+}
+
+.form-radio {
+  @apply rounded-full;
+
+  &:checked {
+    @apply bg-radio;
+  }
+}
+
+.form-toggle {
+  @apply mr-1.5;
+  @apply h-4 w-9 bg-circle rounded-60 appearance-none bg-no-repeat bg-left-center border-1 p-1.5;
+
+  &:checked {
+    @apply bg-primary-blue border-primary-blue bg-right-center bg-white-circle;
+  }
+
+  &:hover:not(:disabled) {
+    &:not(:checked) {
+      @apply bg-blue-circle border-primary-blue
+    }
+  }
+}
+
+// .header {
+//   nav {
+//     @apply shadow-md font-heading;
+
+//     .header-wrapper {
+//       @apply flex justify-between w-full items-center;
+//     }
+
+//     .login-menu {
+//       @apply flex items-center justify-end h-full;
+
+//       .nav-link {
+//         @apply text-sm text-secondary-black font-heading font-semibold;
+
+//         &:hover {
+//           @apply text-primary-blue
+//         }
+//       }
+//     }
+//   }
+// }
+.login-resetpwd-form-wrapper {
+  @apply min-h-screen flex flex-col items-center justify-center;
+}
+
+.login-resetpwd-form {
+  @apply w-full max-w-xl mx-auto p-10 bg-white shadow-lg h-full rounded-xl;
+}
+
+.login-form-heading {
+  @apply text-2xl text-text-900 mb-6 text-center;
+}
+
+.btn-google {
+  @apply bg-ternary-white border-ternary-light-pink text-secondary-black border rounded-md text-sm;
+
+  &:hover {
+    @apply bg-ternary-lighter-pink;
+  }
+}
+
+.btn-github {
+  @apply bg-black text-white;
+
+  &:hover {
+    @apply bg-text-400
+  }
+}
+
+.btn-twitter {
+  @apply text-white bg-primary-blue-shade-5 border-primary-blue-shade-5;
+
+  &:hover {
+    @apply bg-primary-blue-shade-3
+  }
+}
+
+.divider-option {
+  @apply login-divider text-text-500 flex items-center text-center my-7 w-full;
+}
+
+.sign-up-link {
+  @apply text-secondary-black-shade-6 font-semibold font-heading text-center;
+
+}
+
+// Header design after login
+
+.header-with-content-wrapper {
+  @apply flex h-full;
+}
+
+.main-header {
+  @apply bg-white shadow-xl h-full p-6 fixed;
+
+  .site_branding {
+
+    @apply mb-7 flex items-center;
+
+    a {
+      @apply flex items-center py-3;
+
+      &:hover {
+        @apply opacity-75;
+      }
+    }
+    .hamburger {
+      @apply ms-8;
+      .toggle-btn {
+        @apply relative p-3;
+      }
+    }
+    
+  }
+  &.menu-container--open {
+    @apply -ms-56;
+    .hamburger {
+      .menu--open {
+        @apply rotate-180;
+      }
+    }
+  }
+}
+
+.navigation-menu {
+  @apply mb-8;
+
+  .menu-heading {
+    @apply font-pera text-secondary-black mb-3 text-base;
+  }
+
+  .nav-link {
+    @apply font-heading text-sm flex items-center mb-4 font-medium text-secondary-black-shade-1;
+
+    span {
+      @apply ml-3;
+    }
+
+    &:hover {
+      @apply text-primary-blue;
+    }
+  }
+}
+
+// Sub inner menu 
+
+.main-content {
+  @apply w-w-calc-300 ms-300 transition-all;
+  &.main-content--open {  
+    @apply w-full ms-0 transition-all;
+  }
+}
+
+.sub-inner-header {
+  @apply bg-white border-b-1 p-4;
+
+  .inner-menu-wrapper {
+    @apply flex justify-between items-center;
+
+    .breadcrums {
+      a {
+        @apply text-secondary-black-shade-6
+      }
+    }
+
+    .search-input-box {
+      @apply w-full max-w-xs bg-white rounded-md transition-all relative flex items-center;
+    }
+
+    .search-input-box,
+    .events-alert {
+      @apply mr-4;
+    }
+
+    .inner-menu-items {
+      @apply flex items-center;
+    }
+  }
+}
+
+.dashboard-grid-view {
+  @apply p-6;
+
+  .page-heading-wrapper {
+    @apply flex justify-between items-center mb-8;
+
+    .page-view-wrapper {
+      @apply flex items-center;
+
+      h1 {
+        @apply mr-4 font-heading font-semibold text-xl text-secondary-black-shade-1;
+      }
+
+      .view-btn-wrapper {
+        @apply small-desktop_flex small-desktop_items-center hidden;
+
+        .view-btn {
+          @apply w-10 h-10 border-1 border-secondary-black-shade-1 mr-2 flex justify-center items-center;
+
+          &.active,
+          &:hover,
+          &:focus {
+            @apply border-primary-blue fill-primary-blue;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Grid table
+
+.grid-cards-wrapper {
+  @apply small-desktop_columns-2 small-desktop_gap-12 columns-1
+}
+
+.card-table {
+  @apply bg-white border-1 border-text-light shadow-md mb-12 inline-block w-full;
+
+  &:last-child {
+    @apply mb-0;
+  }
+
+  .card-header {
+    @apply p-5 border-b-1 border-text-light;
+
+    .card-header-wrapper {
+      @apply flex justify-between items-center;
+
+      .server-data-link {
+        .server-hoverd-data {
+          @apply opacity-0 transition-all text-secondary-black-shade-6 h-0 flex items-center font-normal text-sm;
+
+          .server-meta-ip,
+          .spinup-provider-icon,
+          .server-meta-os,
+          .server-meta-db,
+          .server-meta-size {
+            @apply mr-3;
+          }
+
+          .server-meta-ip {
+            .tooltip {
+              @apply hidden;
+
+            }
+
+            &:hover {
+              .tooltip {
+                @apply block bg-white p-2 text-primary-blue border-1 border-primary-blue;
+              }
+            }
+          }
+        }
+
+        &:hover {
+          .server-hoverd-data {
+            @apply opacity-100 h-full transition-all;
+          }
+        }
+      }
+    }
+  }
+}
+
+.site-table-list {
+  @apply w-full;
+
+  thead {
+    @apply bg-secondary-white-shade-2 border-b-1 border-text-light;
+
+    tr {
+      th {
+        @apply px-4 py-3 text-xs font-pera text-secondary-black-shade-6 font-semibold text-start;
+
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      @apply border-b-1 border-text-light;
+
+      &:last-child {
+        @apply border-0;
+      }
+
+      td {
+        @apply p-4 text-sm text-secondary-black-shade-6 font-semibold;
+
+        .site-overview {
+          @apply flex items-center justify-end;
+
+          li {
+            @apply mr-4;
+          }
+        }
+      }
+
+      .site-domain {
+        a {
+          @apply text-primary-blue;
+        }
+      }
+
+      .site-status {
+        a {
+          @apply text-center;
+
+          span {
+            @apply border-1 border-primary-blue text-primary-blue rounded-full flex justify-center items-center w-5 h-5;
+          }
+        }
+      }
+    }
+  }
+}
