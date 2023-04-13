@@ -370,7 +370,7 @@ button {
   @apply w-full;
 
   thead {
-    @apply bg-secondary-white-shade-2 border-b-1 border-text-light;
+    @layer bg-secondary-white-shade-2 border-b-1 border-text-light;
 
     tr {
       th {
