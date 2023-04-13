@@ -314,7 +314,7 @@ button {
 // Grid table
 
 .grid-cards-wrapper {
-  @apply small-desktop_columns-2 small-desktop_gap-12 columns-1
+  @layer small-desktop_columns-2 small-desktop_gap-12 columns-1
 }
 
 .card-table {
