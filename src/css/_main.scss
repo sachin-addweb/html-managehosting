@@ -248,7 +248,7 @@ button {
 // Sub inner menu 
 
 .main-content {
-  @apply w-w-calc-300 ms-300 transition-all;
+  @layer w-w-calc-300 ms-300 transition-all;
   &.main-content--open {  
     @apply w-full ms-0 transition-all;
   }
