@@ -140,7 +140,9 @@ module.exports = {
         '60' : '60px',
       },
       minWidth: {
-        '120': '120px'
+        '120': '120px',
+        '200': '200px',
+        '500' : '500px',
       },
       width: {
         '300' : '300px',
@@ -149,6 +151,7 @@ module.exports = {
       spacing : {
         '300' : '300px',
         '54': '235px',
+        '500' : '500px',
       },
       transitionProperty: {
         easy: ".3s ease-in-out",

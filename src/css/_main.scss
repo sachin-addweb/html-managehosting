@@ -260,7 +260,7 @@ button {
         @apply mr-4;
 
         .toggle-btn {
-          @apply relative;
+          @apply relative cursor-pointer;
 
           &.menu--open {
             @apply rotate-180;
@@ -279,7 +279,60 @@ button {
 
     .search-input-box,
     .events-alert {
-      @apply mr-4;
+      @apply mr-4 relative cursor-pointer;
+
+      .listing-dropdown {
+        @apply absolute right-0 top-12 bg-white shadow-md border-1 border-text-light min-w-500 max-h-500 overflow-y-auto z-50 hidden;
+
+        &.expanded-isting-dropdown {
+          @apply block;
+        }
+        .listing-dropdown-menu {
+          .header-dropdown-header {
+            @apply flex justify-between items-center px-4 py-3;
+            a {
+              @apply text-primary-blue text-base font-heading;
+            }
+            span {
+              @apply text-secondary-black font-semibold font-heading;
+            }
+          }
+          .header-dropdown-date-heading {
+            @apply px-4 py-3 bg-secondary-white-shade-2 border-y-1 border-text-light font-heading text-xs text-secondary-black-shade-6;
+          }
+          .list-item-body {
+            
+            @apply bg-secondary-white-shade-2;
+            .listing-items {
+              @apply bg-white mb-1.5 border-y-1 border-text-light  px-4 py-3;
+              &:last-child {
+                @apply mb-0;
+              }
+              .list-item {
+                @apply flex items-center;
+
+                .listitem-team {
+                  @apply mr-3;
+                  >div {
+                    @apply rounded-full overflow-hidden;
+                  }
+                }
+                .listitem-desc {
+                  .listitem-title {
+                    @apply text-sm text-secondary-black mb-1.5 block;
+                    &:hover {
+                      @apply text-primary-blue;
+                    }
+                  }
+                  .listitem-meta {
+                    @apply text-xs text-secondary-black-shade-6 font-pera;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
 
     .inner-menu-items {
@@ -352,19 +405,6 @@ button {
           .server-meta-size {
             @apply mr-3;
           }
-
-          .server-meta-ip {
-            .tooltip {
-              @apply hidden;
-
-            }
-
-            &:hover {
-              .tooltip {
-                @apply block bg-white p-2 text-primary-blue border-1 border-primary-blue;
-              }
-            }
-          }
         }
 
         &:hover {
@@ -373,6 +413,21 @@ button {
           }
         }
       }
+    }
+  }
+}
+
+.server-meta-ip,
+.tooltip-wrapper {
+  @apply relative;
+  .tooltip {
+    @apply hidden absolute bottom-6 -right-4 shadow-md bg-white p-2 font-semibold text-primary-blue text-center border-1 border-text-light min-w-200;
+
+  }
+
+  &:hover {
+    .tooltip {
+      @apply block ;
     }
   }
 }
@@ -409,7 +464,22 @@ button {
           @apply flex items-center justify-end;
 
           li {
-            @apply mr-4;
+            @apply mr-4 relative;
+            .site-overview-inner-menu {
+              @apply hidden absolute bg-white shadow-md border-1 border-text-light right-0 z-10 min-w-200 py-3;
+              &.expanded {
+                @apply block;
+              }
+              li {
+                @apply mr-0;
+                a {
+                  @apply text-sm text-secondary-black-shade-6 font-pera font-normal px-4 py-2 block;
+                  &:hover {
+                    @apply text-primary-blue;
+                  }
+                }
+              }
+            }
           }
         }
       }
