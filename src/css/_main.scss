@@ -44,7 +44,7 @@ button {
 }
 
 .btn {
-  @apply min-w-120 text-base px-5 py-3.5 text-white rounded-round font-bold font-heading text-center inline-block;
+  @apply min-w-120 text-base px-5 py-3.5 text-white rounded-round font-bold font-heading text-center;
 
   &.btn-primary {
     @apply bg-primary-blue border-primary-blue;
@@ -55,7 +55,7 @@ button {
   }
 
   &.btn-link {
-    @apply text-secondary-black-shade-1 p-0 font-pera font-normal inline;
+    @apply text-secondary-black-shade-1 p-0 font-pera font-normal;
 
     &:hover {
       @apply underline text-gray-900 text-primary-blue
@@ -69,6 +69,9 @@ button {
       @apply shadow-md
     }
   }
+}
+.forgot-pwd {
+  @apply block text-center;
 }
 
 .form-controls,
