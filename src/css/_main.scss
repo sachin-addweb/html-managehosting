@@ -55,7 +55,7 @@ button {
   }
 
   &.btn-link {
-    @apply text-secondary-black-shade-1 p-0 font-pera font-normal;
+    @apply text-secondary-black-shade-1 p-0 font-pera font-normal inline;
 
     &:hover {
       @apply underline text-gray-900 text-primary-blue
