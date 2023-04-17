@@ -1,25 +1,25 @@
 window.addEventListener("DOMContentLoaded", () => {
   console.log("Loaded Scripts");
-  if (document.body.contains(document.querySelector('.header-with-content-wrapper'))) {
-    const hamburgerMenu = document.querySelector('.toggle-btn');
-    const menuContainer = document.querySelector('.main-header');
-    const mainContainer = document.querySelector('.main-content');
-    const closeMenu = document.querySelector(".close-btn");
-    // const menu = document.querySelector('.menu');
+  // if (document.body.contains(document.querySelector('.header-with-content-wrapper'))) {
+  //   const hamburgerMenu = document.querySelector('.toggle-btn');
+  //   const menuContainer = document.querySelector('.main-header');
+  //   const mainContainer = document.querySelector('.main-content');
+  //   const closeMenu = document.querySelector(".close-btn");
+  //   // const menu = document.querySelector('.menu');
 
-    hamburgerMenu.addEventListener('click', function () {
-      hamburgerMenu.classList.toggle('menu--open');
-      menuContainer.classList.toggle('menu-container--open');
-      mainContainer.classList.toggle('main-content--open');
+  //   hamburgerMenu.addEventListener('click', function () {
+  //     hamburgerMenu.classList.toggle('menu--open');
+  //     menuContainer.classList.toggle('menu-container--open');
+  //     mainContainer.classList.toggle('main-content--open');
 
-    });
-    closeMenu.addEventListener('click', function () {
-      hamburgerMenu.classList.remove('menu--open');
-      menuContainer.classList.remove('menu-container--open');
-      mainContainer.classList.remove('main-content--open');
+  //   });
+  //   closeMenu.addEventListener('click', function () {
+  //     hamburgerMenu.classList.remove('menu--open');
+  //     menuContainer.classList.remove('menu-container--open');
+  //     mainContainer.classList.remove('main-content--open');
 
-    });
-  }
+  //   });
+  // }
 
   // Onlick for dots 
   if (document.body.contains(document.querySelector('.dashboard-grid-view'))) {
@@ -43,8 +43,8 @@ window.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  if (document.body.contains(document.querySelector('.sub-inner-header'))) {
-    const eventButtons = document.querySelectorAll('.events-alert');
+  if (document.body.contains(document.querySelector('.inner-menu-wrapper'))) {
+    const eventButtons = document.querySelectorAll('.toggle--menu');
     const openMenu = document.querySelectorAll('.listing-dropdown');
 
     eventButtons.forEach((button, index) => {

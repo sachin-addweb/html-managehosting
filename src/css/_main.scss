@@ -191,37 +191,135 @@ button {
 
 // Header design after login
 
-.header-with-content-wrapper {
-  @apply flex h-full;
-}
+// .header-with-content-wrapper {
+//   @apply flex h-full;
+// }
 
 .main-header {
-  @apply bg-white shadow-xl h-full w-300 p-6 fixed lg_block hidden lg_z-0 z-50;
+  @apply bg-white shadow-md  py-4 lg_block hidden;
 
-  .site_branding {
+  .header-wrapper {
+    @apply flex items-center w-full;
+    .site_branding {
+  
+      @apply  flex items-center justify-between;
+  
+      a {
+        @apply flex items-center py-2.5;
+  
+        &:hover {
+          @apply opacity-75;
+        }
+      }
+      .hamburger {
+        @apply ms-4;
+      }
+  
+    }
+  
+    &.menu-container--open {
+      @apply lg_hidden block;
+    }
+    .inner-menu-wrapper {
+      @apply flex justify-between items-center w-full;
+    
+      .breadcrums {
+        @apply flex items-center;
+    
+        .hamburger {
+          @apply mr-4;
+    
+          .toggle-btn {
+            @apply relative cursor-pointer;
+    
+            &.menu--open {
+              @apply rotate-180;
+            }
+          }
+        }
+    
+        a {
+          @apply text-secondary-black-shade-6
+        }
+      }
+    
+      .search-input-box {
+        @apply w-full max-w-xs bg-white rounded-md transition-all relative  hidden;
+      }
+    
+      .inner-menu-items {
+        @apply flex items-center;
+      }
+      .user-profile {
+        img {
+          @apply rounded-full overflow-hidden ;
+        }
+      }
+      .toggle--menu {
+        @apply relative cursor-pointer mr-4 p-3;
 
-    @apply mb-7 flex items-center justify-between;
-
-    a {
-      @apply flex items-center py-3;
-
-      &:hover {
-        @apply opacity-75;
+        &:last-child {
+          @apply mr-0 pr-0;
+        }
+        .listing-dropdown {
+          @apply absolute right-0 top-12 bg-white shadow-md border-1 border-text-light min-w-400 max-h-500 overflow-y-auto z-50 hidden;
+    
+          &.expanded-isting-dropdown {
+            @apply block;
+          }
+          .listing-dropdown-menu {
+            .header-dropdown-header {
+              @apply flex justify-between items-center px-4 py-3;
+              a {
+                @apply text-primary-blue text-base font-heading;
+              }
+              span {
+                @apply text-secondary-black font-semibold font-heading;
+              }
+            }
+            .header-dropdown-date-heading {
+              @apply px-4 py-3 bg-secondary-white-shade-2 border-y-1 border-text-light font-heading text-xs text-secondary-black-shade-6;
+            }
+            .list-item-body {
+              
+              @apply bg-secondary-white-shade-2;
+              .listing-items {
+                @apply bg-white mb-1.5 border-y-1 border-text-light  px-4 py-3;
+                &:last-child {
+                  @apply mb-0;
+                }
+                .list-item {
+                  @apply flex items-center;
+    
+                  .listitem-team {
+                    @apply mr-3;
+                    >div {
+                      @apply rounded-full overflow-hidden;
+                    }
+                  }
+                  .listitem-desc {
+                    .listitem-title {
+                      @apply text-sm text-secondary-black mb-1.5 block;
+                      &:hover {
+                        @apply text-primary-blue;
+                      }
+                    }
+                    .listitem-meta {
+                      @apply text-xs text-secondary-black-shade-6 font-pera;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     }
-    .hamburger {
-      @apply ms-4;
-    }
-
-  }
-
-  &.menu-container--open {
-    @apply lg_hidden block;
   }
 }
 
 .navigation-menu {
-  @apply mb-8;
+  @apply px-4 py-3;
 
   .menu-heading {
     @apply font-pera text-secondary-black mb-3 text-base;
@@ -243,104 +341,9 @@ button {
 // Sub inner menu 
 
 .main-content {
-  @apply lg_w-w-calc-300 lg_ms-300 transition-all w-full;
-
+  @apply transition-all w-full;
   &.main-content--open {
     @apply w-full ms-0 transition-all  ;
-  }
-}
-
-.sub-inner-header {
-  @apply bg-white border-b-1 p-4;
-
-  .inner-menu-wrapper {
-    @apply flex justify-between items-center;
-
-    .breadcrums {
-      @apply flex items-center;
-
-      .hamburger {
-        @apply mr-4;
-
-        .toggle-btn {
-          @apply relative cursor-pointer;
-
-          &.menu--open {
-            @apply rotate-180;
-          }
-        }
-      }
-
-      a {
-        @apply text-secondary-black-shade-6
-      }
-    }
-
-    .search-input-box {
-      @apply w-full max-w-xs bg-white rounded-md transition-all relative md_flex md_items-center hidden;
-    }
-
-    .search-input-box,
-    .events-alert {
-      @apply mr-4 relative cursor-pointer;
-
-      .listing-dropdown {
-        @apply absolute right-0 top-12 bg-white shadow-md border-1 border-text-light min-w-500 max-h-500 overflow-y-auto z-50 hidden;
-
-        &.expanded-isting-dropdown {
-          @apply block;
-        }
-        .listing-dropdown-menu {
-          .header-dropdown-header {
-            @apply flex justify-between items-center px-4 py-3;
-            a {
-              @apply text-primary-blue text-base font-heading;
-            }
-            span {
-              @apply text-secondary-black font-semibold font-heading;
-            }
-          }
-          .header-dropdown-date-heading {
-            @apply px-4 py-3 bg-secondary-white-shade-2 border-y-1 border-text-light font-heading text-xs text-secondary-black-shade-6;
-          }
-          .list-item-body {
-            
-            @apply bg-secondary-white-shade-2;
-            .listing-items {
-              @apply bg-white mb-1.5 border-y-1 border-text-light  px-4 py-3;
-              &:last-child {
-                @apply mb-0;
-              }
-              .list-item {
-                @apply flex items-center;
-
-                .listitem-team {
-                  @apply mr-3;
-                  >div {
-                    @apply rounded-full overflow-hidden;
-                  }
-                }
-                .listitem-desc {
-                  .listitem-title {
-                    @apply text-sm text-secondary-black mb-1.5 block;
-                    &:hover {
-                      @apply text-primary-blue;
-                    }
-                  }
-                  .listitem-meta {
-                    @apply text-xs text-secondary-black-shade-6 font-pera;
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-
-    .inner-menu-items {
-      @apply flex items-center;
-    }
   }
 }
 
