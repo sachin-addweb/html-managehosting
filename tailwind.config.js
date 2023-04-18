@@ -144,9 +144,13 @@ module.exports = {
         '200': '200px',
         '400' : '400px',
       },
+      maxWidth: {
+        '200': '200px',
+      },
       width: {
         '300' : '300px',
         'w-calc-300' : 'calc(100% - 300px)',
+        'w-calc-200' : 'calc(100% - 200px)',
       },
       spacing : {
         '300' : '300px',
