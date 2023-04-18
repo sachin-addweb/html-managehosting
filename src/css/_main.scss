@@ -264,8 +264,9 @@ span {
         @apply flex items-center;
       }
       .user-profile {
+        @apply flex items-center;
         img {
-          @apply rounded-full overflow-hidden ;
+          @apply rounded-full overflow-hidden mr-2;
         }
       }
       .toggle--menu {
@@ -305,9 +306,12 @@ span {
                   @apply flex items-center;
     
                   .listitem-team {
-                    @apply mr-3;
+                    @apply mr-3 relative;
                     >div {
                       @apply rounded-full overflow-hidden;
+                    }
+                    .listitem-status {
+                      @apply absolute -bottom-2 -right-2 border-2 border-solid border-white rounded-3xl bg-white;
                     }
                   }
                   .listitem-desc {
@@ -661,5 +665,19 @@ span {
 .site-detail-tables {
   .card-header {
     @apply justify-between;
+  }
+}
+.helpfulLinks,
+.relatedDocs {
+  h3 {
+    @apply font-semibold mb-4;
+  }
+}
+
+.relatedDocs { 
+  ul {
+    li {
+      @apply mb-4;
+    }
   }
 }

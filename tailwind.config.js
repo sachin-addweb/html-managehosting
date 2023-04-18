@@ -15,9 +15,8 @@ const plugins = Object.keys(allPlugins)
       return allPlugins[k];
     }
   });
-
 module.exports = {
-  content: ["./src/**/*.{html,js,php}"],
+  content: ["./src/**/*.{html,js,php}" , "./node_modules/tw-elements/dist/js/**/*.js"],
   darkMode: "class",
   theme: {
     extend: {
@@ -178,6 +177,7 @@ module.exports = {
   plugins: [
     require('@tailwindcss/container-queries'),
     require('@tailwindcss/typography'),
+    require("tw-elements/dist/plugin.cjs"),
     // ...
   ],
   mode: 'jit',
