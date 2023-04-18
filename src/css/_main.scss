@@ -1,7 +1,7 @@
 //All styles can be added here.
 body,
 html {
-  @apply w-full h-full
+  @apply w-full h-full font-heading;
 }
 
 p {
@@ -10,6 +10,19 @@ p {
 
 button {
   @apply font-heading font-semibold
+}
+span {
+  @apply text-base inline-block font-heading  font-semibold;
+}
+
+.container-fluid {
+  @apply w-full px-4;
+}
+
+.rounded-img {
+  img {
+    @apply overflow-hidden rounded-full;
+  }
 }
 
 // Social links btn
@@ -63,7 +76,7 @@ button {
   }
 
   &.btn-outline {
-    @apply bg-transparent border-primary-blue text-primary-blue border;
+    @apply bg-transparent border-primary-blue text-primary-blue border py-3;
 
     &:hover {
       @apply shadow-md
@@ -202,7 +215,7 @@ button {
     @apply flex items-center w-full;
     .site_branding {
   
-      @apply  flex items-center justify-between;
+      @apply  flex items-center justify-between max-w-200 w-full;
   
       a {
         @apply flex items-center py-2.5;
@@ -506,5 +519,147 @@ button {
         }
       }
     }
+  }
+}
+.notification-btn {
+  @apply flex items-center w-full ;
+}
+.sidebar-menu {
+  @apply max-w-200 w-full bg-secondary-white-shade-9 min-h-screen py-4;
+  .back-to-server {
+    @apply p-4 mb-4 font-pera font-semibold text-sm text-secondary-black-shade-6;
+    &.active,
+    &:hover,
+    &:focus {
+      a {
+        @apply text-primary-blue;
+      }
+    }
+  }
+  ul {
+    li {
+      @apply p-4;
+      a {
+        @apply font-pera font-semibold text-sm text-secondary-black-shade-6 ;
+      }
+      &.active,
+      &:hover,
+      &:focus {
+        a {
+          @apply text-primary-blue;
+        }
+      }
+    }
+  }
+}
+.site-details-wrap {
+  @apply w-w-calc-200 mb-16;
+  .detail-page-menu {
+    @apply bg-secondary-white-shade-9;
+    .site-detail {
+      @apply flex justify-between items-center w-full;
+      .site-link {
+        h3 {
+          @apply font-heading font-normal text-xl;
+        }
+        a {
+          @apply font-pera font-semibold text-secondary-black-shade-6 text-sm;
+          &:hover {
+            @apply text-primary-blue;
+          }
+        }
+      }
+      .site-details {
+        @apply flex items-center w-full justify-end;
+        li {
+          @apply flex flex-col p-4 me-4;
+          
+          &:last-child {
+            @apply me-0 pr-0;
+          }
+          span {
+            @apply font-pera font-semibold text-sm text-secondary-black-shade-6 mb-2;
+          }
+          a {
+            @apply font-heading text-secondary-black text-base;
+
+            &:hover {
+              @apply text-primary-blue underline;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.site-details-cards {
+  @apply grid gap-8 py-10;
+}
+.cards {
+  @apply bg-white border-1 border-text-light shadow-md cursor-pointer;
+
+  &:hover {
+    @apply shadow-lg;
+  }
+  .card-header {
+    @apply flex items-center p-4 border-b-1 border-text-light font-pera ;
+    img {
+      @apply mr-4;
+    }
+    .indicator {
+      @apply order-3 flex-grow text-right;
+
+      &.off ,
+      &.on{
+        @apply text-primary-blue;
+      }
+    }
+  }
+  .card-body {
+    .card-body-table {
+      @apply flex justify-between flex-col  py-8 px-5 border-b-1 border-text-light;
+
+      &:last-child {
+        @apply border-b-0;
+      }
+      span {
+        @apply text-sm;
+      }
+    }
+    .card-body-listing {
+      @apply py-3 px-4;
+      ul {
+        li {
+          @apply flex justify-between items-center mb-5;
+          a {
+            @apply font-pera font-semibold text-sm text-primary-blue;
+            &:hover,
+            &:focus {
+              @apply underline;
+            } 
+          }
+          span ,
+          a{
+            @apply flex;
+            img {
+              @apply mr-2;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.site-details-cards,
+.site-detail-tables {
+  .card-header {
+    @apply flex items-center p-4 border-b-1 border-text-light font-pera ;
+  }
+}
+.site-detail-tables {
+  .card-header {
+    @apply justify-between;
   }
 }
