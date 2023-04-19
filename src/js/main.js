@@ -64,6 +64,44 @@ window.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  if (document.body.contains(document.querySelector('.faqs')))  {
 
+    function toggleItem(elem) {
+      for (var i = 0; i < elem.length; i++) {
+        elem[i].addEventListener("click", function (e) {
+          var current = this;
+          for (var i = 0; i < elem.length; i++) {
+            if (current != elem[i]) {
+              elem[i].classList.remove('active-accordion');
+            } else if (current.classList.contains('active-accordion') === true) {
+              current.classList.remove('active-accordion');
+            } else {
+              current.classList.add('active-accordion')
+            }
+          }
+          e.preventDefault();
+        });
+      };
+    }
+    toggleItem(document.querySelectorAll('.accordion-listing'));
+        function toggleItem(elem) {
+      for (var i = 0; i < elem.length; i++) {
+        elem[i].addEventListener("click", function (e) {
+          var current = this;
+          for (var i = 0; i < elem.length; i++) {
+            if (current != elem[i]) {
+              elem[i].classList.remove('active-accordion');
+            } else if (current.classList.contains('active-accordion') === true) {
+              current.classList.remove('active-accordion');
+            } else {
+              current.classList.add('active-accordion')
+            }
+          }
+          e.preventDefault();
+        });
+      };
+    }
+    toggleItem(document.querySelectorAll('accordion-listing'));
+  }
 
 });

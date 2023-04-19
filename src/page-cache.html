@@ -744,85 +744,40 @@
                         <div class="col-span-2">
                             <div class="cards">
                                 <div class="card-header">
-                                    <span>Settings</span>
+                                    <input type="checkbox" name="" id="" class="form-toggle">
+                                    <span>Page Cache</span>
                                 </div>
                                 <div class="card-body">
                                     <form action="" class="form-wrapper py-8 px-5">
                                         <div class="grid md_grid-cols-2 grid-cols-1 gap-6">
                                             <div class="mb-6 w-full md:w-full flex items-end">
                                                 <div class="w-full">
-                                                    <label for="">Primary Domain</label>
-                                                    <input type="text" name="" value="" autofocus="autofocus"
+                                                    <label for="">Cache Duration</label>
+                                                    <input type="number" name="" value="" autofocus="autofocus"
                                                         class="form-controls" />
                                                 </div>
-                                                <button class="btn btn-outline ms-4">Change</button>
                                             </div>
-                                            <div class="mb-6 w-full md:w-full">
-                                                <label for="">Public Folder</label>
-                                                <input type="text" name="" value="" autofocus="autofocus"
-                                                    class="form-controls" />
-                                            </div>
-                                            <div class="mb-6 w-full md:w-full">
-                                                <label for="">Additional Domains</label>
-                                                <div class="flex items-center">
-                                                    <div class="input-grouping relative w-full">
-                                                        <input type="text" name="" value="" autofocus="autofocus"
-                                                            class="form-controls pr-24" placeholder="www.example.com" />
-                                                        <button class="btn btn-outline absolute right-2 top-50% translate-y-50%">
-                                                            <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path d="M11 3.73334V0L18 6.53333L11 13.0667V9.23999C6 9.23999 2.5 10.7333 0 14C1 9.33333 4 4.66667 11 3.73334Z" fill="#03588C"/>
-                                                                </svg>
-                                                                
-                                                        </button>
-                                                    </div>
-                                                    <div class="close-btn ms-4">
-                                                        <img src="./img/close-menu.svg" alt="" width="16" height="16">
-                                                    </div>
-                                                </div>
-                                                <div class="domain mt-4">
-                                                    <button class="btn btn-outline">+ Add Domain</button>
-                                                </div>
-                                            </div>
-                                            <div class="mb-6 w-full md:w-full">
-                                                <label for="">PHP Version</label>
+                                            <div class="mb-6 w-full md:w-full flex items-end">
                                                 <div class="select-dropdown-wrapper">
                                                     <select class="select-dropdown" type="text" name="" value=""
                                                         autofocus="autofocus">
-                                                        <option>8.3</option>
-                                                        <option>7.4</option>
-                                                        <option>8.0</option>
+                                                        <option value="">Second</option>
+                                                        <option value="">Minute</option>
+                                                        <option value="">Hour</option>
+                                                        <option value="">Day</option>
+                                                        <option value="">Week</option>
+                                                        <option value="">Month</option>
+                                                        <option value="">Year</option>
                                                     </select>
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="mb-6 w-full md:w-full">
+                                            <label for="">Path Exclusions</label>
+                                            <textarea name="" id=""  class="textareas"></textarea>
+                                            <span>One exclusion per line.</span>
+                                        </div>
                                         <div class="w-full md:w-full flex justify-end">
-                                            <button class="btn btn-primary">Save</button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                            <div class="cards">
-                                <div class="card-header">
-                                    <input type="checkbox" name="" id="" class="form-toggle">
-                                    <span>Basic Authentication</span>
-                                </div>
-                                <div class="card-body">
-                                    <form action="" class="form-wrapper py-8 px-5">
-                                        <div class="grid md_grid-cols-2 grid-cols-1 gap-6">
-                                            <div class="mb-6 w-full md:w-full">
-                                                <div class="w-full">
-                                                    <label for="">Username</label>
-                                                    <input type="text" name="" value="" autofocus="autofocus"
-                                                        class="form-controls" />
-                                                </div>
-                                            </div>
-                                            <div class="mb-6 w-full md:w-full">
-                                                <label for="">Password</label>
-                                                <input type="password" name="" value="" autofocus="autofocus"
-                                                    class="form-controls" />
-                                            </div>
-                                        </div>
-                                        <div class="w-full md:w-full">
                                             <button class="btn btn-primary">Save</button>
                                         </div>
                                     </form>
@@ -835,84 +790,19 @@
                                 <ul class="accordion">
                                     <li class="accordion-listing">
                                         <h5 >
-                                            Primary Domain
+                                            Full Page Cache
                                         </h5>
                                         <div class="description">
-                                            <p>This is the primary domain your site is accessible from. Please be
-                                                aware that changing the primary domain will result in a short period
-                                                of downtime and can negatively impact SEO if the old domain is not
-                                                properly redirected. See <a
-                                                    href="https://spinupwp.com/doc/change-primary-domains/"
-                                                    target="_blank">this doc</a> for more info.</p>
+                                            <p>A full page cache can dramatically improve the performance of your site by quickly serving a previously generated page rather than executing PHP and querying the database. Not only will this improve your site's load time, it will also increase the number of requests your server can handle. Enabling this option will configure Nginx FastCGI caching that is optimized for WordPress.</p>
+                                            <p>If this is a production site we highly recommend you leave full page caching enabled. If this is a staging/testing site, or performance isn't a consideration, then you can disable full page caching.</p>   
                                         </div>
-                                    </li>
-                                    <li class="accordion-listing">
-                                        <h5 class="">
-                                            Public Folder
-                                        </h5>
-                                        <div class="description">
-                                            <p>This is the folder where your publicly accessible files are located.
-                                                Anything within this directory will be accessible by the browser
-                                                (except for hidden files).</p>
-                                            <p>Updating the Public Folder will configure the <a
-                                                    href="http://nginx.org/en/docs/http/ngx_http_core_module.html#root"
-                                                    target="_blank">root directive</a> in Nginx which is relative to
-                                                <span class="italic">/sites/bedrock.addwebprojects.com/files</span>. Therefore,
-                                                setting a value of <span class="italic">/public</span> will instruct Nginx to
-                                                serve requests from
-                                                <span class="italic">/sites/bedrock.addwebprojects.com/files/public</span>.
-                                                This doesn't create the directory, nor does it move or delete any
-                                                existing files.</p>
-                                        </div>
-                                    </li>
-                                    <li class="accordion-listing">
-                                        <h5 class="">
-                                            Additional Domains
-                                        </h5>
-                                        <div class="description">
-                                            <p>Additional Domains are most commonly used for WordPress Multisite
-                                                setups or if you have a multilingual site and are using subdomains
-                                                for each language. In those cases your site is configured to use
-                                                multiple domains and make use of them.</p>
-                                            <p>If you have .net and .org versions of your Primary Domain, you might
-                                                want to redirect them to your Primary Domain. And you might want the
-                                                www subdomain to redirect to your Primary Domain as well. In these
-                                                cases, enable redirection and they will be 301 redirected to the
-                                                Primary Domain.</p>
-                                        </div>
-                                    </li>
-                                    <li class="accordion-listing">
-                                        <h5 class="">
-                                            PHP
-                                        </h5>
-                                        <div class="description">
-                                            <p>This is the PHP version that this site is currently running under.
-                                                You can change the PHP version at anytime without impacting other
-                                                sites hosted on the server. We recommend that you always use the
-                                                latest version available.</p>
-                                            <p>For WordPress sites you'll want to fully test your site after
-                                                changing this value, because some older plugins are not compatible
-                                                with newer versions of PHP.</p>
-                                        </div>
-                                    </li>
-                                    <li class="accordion-listing">
-                                        <h5 class="">
-                                            Basic Authentication
-                                        </h5>
-                                        <div class="description">
-                                            <p>Basic authentication is a simple method of password protecting a
-                                                site. It is commonly used to protect staging sites, or sites which
-                                                are not yet ready for public consumption.</p>
-                                        </div>
-                                    </li>
                                 </ul>
                             </div>
                             <div class="doc-listing">
                                 <h3>Related Documentation</h3>
                                 <ul class="">
-                                    <li><a href="#">Changing the Primary Domain of a Site</a></li>
-                                    <li><a href="#">Redirects</a></li>
-                                    <li><a href="#">Why is my WordPress Site Not Loading?</a></li>
+                                    <li><a href="#">Caching in SpinupWP</a></li>
+                                    <li><a href="#">Customizing Page Cache Exclusions</a></li>
                                 </ul>
                             </div>
                         </div>

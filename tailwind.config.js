@@ -16,7 +16,7 @@ const plugins = Object.keys(allPlugins)
     }
   });
 module.exports = {
-  content: ["./src/**/*.{html,js,php}" , "./node_modules/tw-elements/dist/js/**/*.js"],
+  content: ["./src/**/*.{html,js,php}"],
   darkMode: "class",
   theme: {
     extend: {
@@ -45,11 +45,17 @@ module.exports = {
         'radio' : "url('../img/radio.svg')",
         'circle': "url('../img/circle.svg')",
         'white-circle' : "url('../img/checked-white.svg')",
-        'blue-circle' : "url('../img/blue-circle.svg')" 
+        'blue-circle' : "url('../img/blue-circle.svg')" ,
+        'drop-down' : "url('../img/down-arrow.svg')",
+        'plus' : "url('../img/plus.svg')",
       },
       backgroundPosition: {
          'left-center' : 'left center' ,
          'right-center' : 'right center'
+      },
+      backgroundSize: {
+        '100%' : '100%',
+        '50%' : '50%',
       },
       colors: {
         transparent: 'transparent',
@@ -145,22 +151,33 @@ module.exports = {
       },
       maxWidth: {
         '200': '200px',
+        '250': '250px',
       },
       width: {
         '300' : '300px',
         'w-calc-300' : 'calc(100% - 300px)',
         'w-calc-200' : 'calc(100% - 200px)',
       },
+      minHeight: {
+        '150' : '150px',
+      },
       spacing : {
         '300' : '300px',
         '54': '235px',
         '500' : '500px',
+        '50%' : '-50%',
       },
       transitionProperty: {
         easy: ".3s ease-in-out",
       },
       borderWidth: {
         '1': '1px',
+      },
+      inset : {
+        '50%' : '50%',
+      },
+      translate : {
+        '50%' : '-50%',
       },
       screens : {
         'small-desktop' : '1440px',
