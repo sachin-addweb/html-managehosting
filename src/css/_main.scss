@@ -150,27 +150,13 @@ span {
   }
 }
 
-// .header {
-//   nav {
-//     @apply shadow-md font-heading;
+.form-check,
+.form-toggle {
+  ~ label {
+    @apply mb-0;
+  }
+}
 
-//     .header-wrapper {
-//       @apply flex justify-between w-full items-center;
-//     }
-
-//     .login-menu {
-//       @apply flex items-center justify-end h-full;
-
-//       .nav-link {
-//         @apply text-sm text-secondary-black font-heading font-semibold;
-
-//         &:hover {
-//           @apply text-primary-blue
-//         }
-//       }
-//     }
-//   }
-// }
 .login-resetpwd-form-wrapper {
   @apply min-h-screen flex flex-col items-center justify-center;
 }
@@ -663,8 +649,10 @@ span {
 }
 
 .cards {
-  @apply bg-white border-1 border-text-light shadow-md cursor-pointer mb-8;
-
+  @apply bg-white border-1 border-text-light shadow-md  mb-8;
+  &.clickable  {
+    @apply cursor-pointer;
+  }
   &:hover {
     @apply shadow-lg;
   }
@@ -733,6 +721,15 @@ span {
         }
       }
     }
+    .card-img-wrapper {
+      @apply flex items-center w-full flex-col p-12;
+      img {
+        @apply mb-6;
+      }
+      .body-text {
+        @apply text-secondary-black-shade-6 font-normal text-xl mb-4;
+      }
+    }
   }
 
   .indicator {
@@ -755,6 +752,11 @@ span {
     @apply flex items-center px-4 py-5 border-b-1 border-text-light font-pera;
   }
 }
+.event-filters {
+  &.select-dropdown-wrapper {
+    @apply w-auto;
+  }
+} 
 
 .site-detail-tables {
   .card-header {
@@ -805,6 +807,9 @@ span {
         @apply mb-4;
         &:last-child {
           @apply mb-0;
+        }
+        a {
+          @apply text-primary-blue font-heading font-semibold;
         }
       }
     }

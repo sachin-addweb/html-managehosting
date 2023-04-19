@@ -744,43 +744,17 @@
                         <div class="col-span-2">
                             <div class="cards">
                                 <div class="card-header">
-                                    <input type="checkbox" name="" id="" class="form-toggle">
-                                    <span>Page Cache</span>
+                                    <div class="flex justify-between items-center w-full">
+                                        <span>Path Redirects</span>
+                                        <button class="btn btn-outline">Add Path Redirect</button>
+                                    </div>
                                 </div>
                                 <div class="card-body">
-                                    <form action="" class="form-wrapper py-8 px-5">
-                                        <div class="grid md_grid-cols-2 grid-cols-1 gap-6">
-                                            <div class="mb-6 w-full md:w-full flex items-end">
-                                                <div class="w-full">
-                                                    <label for="">Cache Duration</label>
-                                                    <input type="number" name="" value="" autofocus="autofocus"
-                                                        class="form-controls" />
-                                                </div>
-                                            </div>
-                                            <div class="mb-6 w-full md:w-full flex items-end">
-                                                <div class="select-dropdown-wrapper">
-                                                    <select class="select-dropdown" type="text" name="" value=""
-                                                        autofocus="autofocus">
-                                                        <option value="">Second</option>
-                                                        <option value="">Minute</option>
-                                                        <option value="">Hour</option>
-                                                        <option value="">Day</option>
-                                                        <option value="">Week</option>
-                                                        <option value="">Month</option>
-                                                        <option value="">Year</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="mb-6 w-full md:w-full">
-                                            <label for="">Path Exclusions</label>
-                                            <textarea name="" id=""  class="textareas"></textarea>
-                                            <span>One exclusion per line.</span>
-                                        </div>
-                                        <div class="w-full md:w-full flex justify-end">
-                                            <button class="btn btn-primary">Save</button>
-                                        </div>
-                                    </form>
+                                    <div class="card-img-wrapper">
+                                        <img src="./img/redirect-path.svg" alt="" width="" height="">
+                                        <h4 class="body-text">Your site doesn't have any path redirects yet.</h4>
+                                        <button class="btn btn-primary">Add Path Redirect</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -789,12 +763,11 @@
                                 <h3>Helpful Hints</h3>
                                 <ul class="accordion">
                                     <li class="accordion-listing">
-                                        <h5 >
-                                            Full Page Cache
+                                        <h5>
+                                            Path Redirects
                                         </h5>
                                         <div class="description">
-                                            <p>A full page cache can dramatically improve the performance of your site by quickly serving a previously generated page rather than executing PHP and querying the database. Not only will this improve your site's load time, it will also increase the number of requests your server can handle. Enabling this option will configure Nginx FastCGI caching that is optimized for WordPress.</p>
-                                            <p>If this is a production site we highly recommend you leave full page caching enabled. If this is a staging/testing site, or performance isn't a consideration, then you can disable full page caching.</p>   
+                                            <p>Path redirects allow you to set up a redirect in Nginx to redirect one path to another path or URL. Path redirects apply to the primary domain and any domains that don't have a redirect enabled at the domain level.  <a href="">More info »</a> </p>
                                         </div>
                                     </li>
                                 </ul>
@@ -802,8 +775,7 @@
                             <div class="doc-listing">
                                 <h3>Related Documentation</h3>
                                 <ul class="">
-                                    <li><a href="#">Caching in SpinupWP</a></li>
-                                    <li><a href="#">Customizing Page Cache Exclusions</a></li>
+                                    <li><a href="#">Path Redirects</a></li>
                                 </ul>
                             </div>
                         </div>

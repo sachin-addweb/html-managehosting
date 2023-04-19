@@ -744,38 +744,21 @@
                         <div class="col-span-2">
                             <div class="cards">
                                 <div class="card-header">
-                                    <input type="checkbox" name="" id="" class="form-toggle">
-                                    <span>Page Cache</span>
+                                    <span>Nginx</span>
                                 </div>
                                 <div class="card-body">
                                     <form action="" class="form-wrapper py-8 px-5">
-                                        <div class="grid md_grid-cols-2 grid-cols-1 gap-6">
-                                            <div class="mb-6 w-full md:w-full flex items-end">
-                                                <div class="w-full">
-                                                    <label for="">Cache Duration</label>
-                                                    <input type="number" name="" value="" autofocus="autofocus"
-                                                        class="form-controls" />
-                                                </div>
-                                            </div>
-                                            <div class="mb-6 w-full md:w-full flex items-end">
-                                                <div class="select-dropdown-wrapper">
-                                                    <select class="select-dropdown" type="text" name="" value=""
-                                                        autofocus="autofocus">
-                                                        <option value="">Second</option>
-                                                        <option value="">Minute</option>
-                                                        <option value="">Hour</option>
-                                                        <option value="">Day</option>
-                                                        <option value="">Week</option>
-                                                        <option value="">Month</option>
-                                                        <option value="">Year</option>
-                                                    </select>
-                                                </div>
-                                            </div>
+                                        <div class="mb-6 w-full md:w-full flex items-center">
+                                            <input type="checkbox" name="" id="" class="form-toggle">
+                                            <label for="">Add rewrite rules for WordPress Multisite subdirectory install</label>
                                         </div>
-                                        <div class="mb-6 w-full md:w-full">
-                                            <label for="">Path Exclusions</label>
-                                            <textarea name="" id=""  class="textareas"></textarea>
-                                            <span>One exclusion per line.</span>
+                                        <div class="mb-6 w-full md:w-full flex items-center">
+                                            <input type="checkbox" name="" id="" class="form-toggle">
+                                            <label for="">Disallow PHP execution in the uploads folder</label>
+                                        </div>
+                                        <div class="mb-6 w-full md:w-full flex items-center">
+                                            <input type="checkbox" name="" id="" class="form-toggle">
+                                            <label for="">Disable XML-RPC</label>
                                         </div>
                                         <div class="w-full md:w-full flex justify-end">
                                             <button class="btn btn-primary">Save</button>
@@ -789,12 +772,32 @@
                                 <h3>Helpful Hints</h3>
                                 <ul class="accordion">
                                     <li class="accordion-listing">
-                                        <h5 >
-                                            Full Page Cache
+                                        <h5>
+                                            Add Rewrite Rules for WordPress Multisite Subdirectory Install
                                         </h5>
                                         <div class="description">
-                                            <p>A full page cache can dramatically improve the performance of your site by quickly serving a previously generated page rather than executing PHP and querying the database. Not only will this improve your site's load time, it will also increase the number of requests your server can handle. Enabling this option will configure Nginx FastCGI caching that is optimized for WordPress.</p>
-                                            <p>If this is a production site we highly recommend you leave full page caching enabled. If this is a staging/testing site, or performance isn't a consideration, then you can disable full page caching.</p>   
+                                            <p>When enabled, Nginx rewrite rules are configured so that traffic to
+                                                WordPress Multisite subdirectory subsites is correctly handled.</p>
+                                        </div>
+                                    </li>
+                                    <li class="accordion-listing">
+                                        <h5>
+                                            Disallow PHP Execution in the Uploads Folder
+                                        </h5>
+                                        <div class="description">
+                                            <p>
+                                                When enabled, Nginx is configured to prevent PHP files in the uploads
+                                                directory from being executed.</p>
+                                        </div>
+                                    </li>
+                                    <li class="accordion-listing">
+                                        <h5>
+                                            Disable XML-RPC
+                                        </h5>
+                                        <div class="description">
+                                            <p>When enabled, Nginx is configured to deny all requests to <span
+                                                    class="italic">xmlrpc.php</span>, which is a common way to attack a
+                                                site.</p>
                                         </div>
                                     </li>
                                 </ul>
@@ -802,8 +805,9 @@
                             <div class="doc-listing">
                                 <h3>Related Documentation</h3>
                                 <ul class="">
-                                    <li><a href="#">Caching in SpinupWP</a></li>
-                                    <li><a href="#">Customizing Page Cache Exclusions</a></li>
+                                    <li><a href="#">Changing Nginx Settings</a></li>
+                                    <li><a href="#">Increasing Server Timeout Limits</a></li>
+                                    <li><a href="">Increasing the Server Max Upload Size</a></li>
                                 </ul>
                             </div>
                         </div>
