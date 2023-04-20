@@ -64,6 +64,72 @@ window.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  if (document.body.contains(document.querySelector('.faqs'))) {
 
+    function toggleItem(elem) {
+      for (var i = 0; i < elem.length; i++) {
+        elem[i].addEventListener("click", function (e) {
+          var current = this;
+          for (var i = 0; i < elem.length; i++) {
+            if (current != elem[i]) {
+              elem[i].classList.remove('active-accordion');
+            } else if (current.classList.contains('active-accordion') === true) {
+              current.classList.remove('active-accordion');
+            } else {
+              current.classList.add('active-accordion')
+            }
+          }
+          e.preventDefault();
+        });
+      };
+    }
+    toggleItem(document.querySelectorAll('.accordion-listing'));
+
+    function toggleItem(elem) {
+      for (var i = 0; i < elem.length; i++) {
+        elem[i].addEventListener("click", function (e) {
+          var current = this;
+          for (var i = 0; i < elem.length; i++) {
+            if (current != elem[i]) {
+              elem[i].classList.remove('active-accordion');
+            } else if (current.classList.contains('active-accordion') === true) {
+              current.classList.remove('active-accordion');
+            } else {
+              current.classList.add('active-accordion')
+            }
+          }
+          e.preventDefault();
+        });
+      };
+    }
+    toggleItem(document.querySelectorAll('accordion-listing'));
+  }
+
+  if (document.body.contains(document.querySelector('.tabs-section'))) {
+    (function () {
+      var d = document,
+        tabs = d.querySelector('.tabs-section .tabs'),
+        tab = d.querySelectorAll('.tabs-section li'),
+        contents = d.querySelectorAll('.tabs-section .content');
+      tabs.addEventListener('click', function (e) {
+        if (e.target && e.target.nodeName === 'LI') {
+          // change tabs
+          for (var i = 0; i < tab.length; i++) {
+            tab[i].classList.remove('active-tab');
+          }
+          e.target.classList.toggle('active-tab');
+
+
+          // change content
+          for (i = 0; i < contents.length; i++) {
+            contents[i].classList.remove('active-tab');
+          }
+
+          var tabId = '#' + e.target.dataset.tabId;
+          d.querySelector(tabId).classList.toggle('active-tab');
+        }
+      });
+    })();
+  }
 
 });
