@@ -742,87 +742,104 @@
                 <div class="site-detail-wrapper container">
                     <div class="site-details-cards">
                         <div class="col-span-2">
-                            <div class="cards ">
+                            <div class="cards">
                                 <div class="card-header">
-                                    <span>Settings</span>
+                                    <span>Site User</span>
                                 </div>
                                 <div class="card-body">
                                     <form action="" class="form-wrapper py-8 px-5">
                                         <div class="grid md_grid-cols-2 grid-cols-1 gap-6">
                                             <div class="mb-6 w-full md:w-full flex items-end">
                                                 <div class="w-full">
-                                                    <label for="">Primary Domain</label>
+                                                    <label for="">
+                                                        Username</label>
                                                     <input type="text" name="" value="" autofocus="autofocus"
-                                                        class="form-controls" />
+                                                        class="form-controls" readonly="readonly" />
                                                 </div>
-                                                <button class="btn btn-outline ms-4">Change</button>
                                             </div>
-                                            <div class="mb-6 w-full md:w-full">
-                                                <label for="">Public Folder</label>
-                                                <input type="text" name="" value="" autofocus="autofocus"
-                                                    class="form-controls" />
-                                            </div>
-                                            <div class="mb-6 w-full md:w-full">
-                                                <label for="">Additional Domains</label>
-                                                <div class="flex items-center">
-                                                    <div class="input-grouping relative w-full">
-                                                        <input type="text" name="" value="" autofocus="autofocus"
-                                                            class="form-controls" placeholder="www.example.com" />
-                                                        <button class="btn btn-outline absolute right-2 top-50% translate-y-50%">
-                                                            <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path d="M11 3.73334V0L18 6.53333L11 13.0667V9.23999C6 9.23999 2.5 10.7333 0 14C1 9.33333 4 4.66667 11 3.73334Z" fill="#03588C"/>
-                                                                </svg>
-                                                                
-                                                        </button>
+                                        </div>
+                                        <div class="mb-6 w-full md:w-full">
+                                            <div class="tabs-section">
+                                                <nav>
+                                                    <ul class='tabs fill-tabs'>
+                                                        <li class='active-tab' data-tab-id='tab1'>Public Key</li>
+                                                        <li data-tab-id='tab2'>Password</li>
+                                                    </ul>
+                                                </nav>
+                                                <div class='content-section fill-tabs-content'>
+                                                    <div id='tab1' class='content active-tab'>
+                                                        <div class="mulitple-checkox-wrap">
+                                                            <div class="heading">
+                                                                <label for="">Select SSH Keys</label>
+                                                                <button class="btn btn-outline">Add SSH Key</button>
+                                                            </div>
+                                                            <div class="multi-checkbox">
+                                                                <ul>
+                                                                    <li>
+                                                                        <input type="checkbox" name="" id=""
+                                                                            class="form-check">
+                                                                        <label for="">Jaimin</label>
+                                                                    </li>
+                                                                    <li>
+                                                                        <input type="checkbox" name="" id=""
+                                                                            class="form-check">
+                                                                        <label for="">aedu</label>
+                                                                    </li>
+                                                                    <li>
+                                                                        <input type="checkbox" name="" id=""
+                                                                            class="form-check">
+                                                                        <label for="">addwebprojects</label>
+                                                                    </li>
+                                                                    <li>
+                                                                        <input type="checkbox" name="" id=""
+                                                                            class="form-check">
+                                                                        <label for="">gowithflow</label>
+                                                                    </li>
+                                                                    <li>
+                                                                        <input type="checkbox" name="" id=""
+                                                                            class="form-check">
+                                                                        <label for="">Jenkins-Server</label>
+                                                                    </li>
+                                                                    <li>
+                                                                        <input type="checkbox" name="" id=""
+                                                                            class="form-check">
+                                                                        <label for="">lp-96</label>
+                                                                    </li>
+                                                                    <li>
+                                                                        <input type="checkbox" name="" id=""
+                                                                            class="form-check">
+                                                                        <label for="">gowithflow</label>
+                                                                    </li>
+                                                                    <li>
+                                                                        <input type="checkbox" name="" id=""
+                                                                            class="form-check">
+                                                                        <label for="">Jenkins-Server</label>
+                                                                    </li>
+                                                                    <li>
+                                                                        <input type="checkbox" name="" id=""
+                                                                            class="form-check">
+                                                                        <label for="">lp-96</label>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <span>
+                                                                Each SSH key is saved to your account.<a
+                                                                    href="">manage</a>
+                                                            </span>
+                                                        </div>
                                                     </div>
-                                                    <div class="close-btn ms-4">
-                                                        <img src="./img/close-menu.svg" alt="" width="16" height="16">
+                                                    <div id='tab2' class='content'>
+                                                        <div class="w-full">
+                                                            <label for="">
+                                                                Password</label>
+                                                            <input type="password" name="" value=""
+                                                                autofocus="autofocus" class="form-controls" />
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="domain mt-4">
-                                                    <button class="btn btn-outline">+ Add Domain</button>
-                                                </div>
-                                            </div>
-                                            <div class="mb-6 w-full md:w-full">
-                                                <label for="">PHP Version</label>
-                                                <div class="select-dropdown-wrapper">
-                                                    <select class="select-dropdown" type="text" name="" value=""
-                                                        autofocus="autofocus">
-                                                        <option>8.3</option>
-                                                        <option>7.4</option>
-                                                        <option>8.0</option>
-                                                    </select>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="w-full md:w-full flex justify-end">
-                                            <button class="btn btn-primary">Save</button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                            <div class="cards">
-                                <div class="card-header">
-                                    <input type="checkbox" name="" id="" class="form-toggle">
-                                    <span>Basic Authentication</span>
-                                </div>
-                                <div class="card-body">
-                                    <form action="" class="form-wrapper py-8 px-5">
-                                        <div class="grid md_grid-cols-2 grid-cols-1 gap-6">
-                                            <div class="mb-6 w-full md:w-full">
-                                                <div class="w-full">
-                                                    <label for="">Username</label>
-                                                    <input type="text" name="" value="" autofocus="autofocus"
-                                                        class="form-controls" />
-                                                </div>
-                                            </div>
-                                            <div class="mb-6 w-full md:w-full">
-                                                <label for="">Password</label>
-                                                <input type="password" name="" value="" autofocus="autofocus"
-                                                    class="form-controls" />
-                                            </div>
-                                        </div>
-                                        <div class="w-full md:w-full">
                                             <button class="btn btn-primary">Save</button>
                                         </div>
                                     </form>
@@ -834,75 +851,66 @@
                                 <h3>Helpful Hints</h3>
                                 <ul class="accordion">
                                     <li class="accordion-listing">
-                                        <h5 >
-                                            Primary Domain
+                                        <h5>
+                                            Site User
                                         </h5>
                                         <div class="description">
-                                            <p>This is the primary domain your site is accessible from. Please be
-                                                aware that changing the primary domain will result in a short period
-                                                of downtime and can negatively impact SEO if the old domain is not
-                                                properly redirected. See <a
-                                                    href="https://spinupwp.com/doc/change-primary-domains/"
-                                                    target="_blank">this doc</a> for more info.</p>
+                                            <p>Sites deployed via SpinupWP are owned by a unique system user, known as a
+                                                site user. Site users can SSH and SFTP to the server, but they will be
+                                                restricted to the site's directory. When making changes to a site, or
+                                                running WP CLI the site user should be used. Find out more about<a
+                                                    href="">site users</a>.</p>
                                         </div>
                                     </li>
                                     <li class="accordion-listing">
-                                        <h5 class="">
-                                            Public Folder
+                                        <h5>
+                                            Connecting via SFTP
                                         </h5>
                                         <div class="description">
-                                            <p>This is the folder where your publicly accessible files are located.
-                                                Anything within this directory will be accessible by the browser
-                                                (except for hidden files).</p>
-                                            <p>Updating the Public Folder will configure the <a
-                                                    href="http://nginx.org/en/docs/http/ngx_http_core_module.html#root"
-                                                    target="_blank">root directive</a> in Nginx which is relative to
-                                                <span class="italic">/sites/bedrock.addwebprojects.com/files</span>. Therefore,
-                                                setting a value of <span class="italic">/public</span> will instruct Nginx to
-                                                serve requests from
-                                                <span class="italic">/sites/bedrock.addwebprojects.com/files/public</span>.
-                                                This doesn't create the directory, nor does it move or delete any
-                                                existing files.</p>
+                                            <p>If you’d like to upload files to your server, you can connect securely
+                                                via SFTP.</p>
+                                            <p>Your site is owned by the <span class="italic">bedrock</span>user and can
+                                                be accessed using SFTP with the following connection information:</p>
+                                            <ul>
+                                                <li>Server: 46.101.10.236</li>
+                                                <li>Port: 22</li>
+                                                <li>Username: bedrock</li>
+                                                <li>Password: For SSH key authentication leave this blank (or select
+                                                    your SSH Key if allowed). For SSH password authentication enter your
+                                                    SSH password.</li>
+                                            </ul>
+                                            <p>The most convenient way to access and manage your files is using a
+                                                desktop SFTP client. Here are the apps we recommend:</p>
+                                            <ul>
+                                                <li>macOS -<a href="">Transmit</a></li>
+                                                <li>Windows & Linux <a href="">Filezilla</a></li>
+                                            </ul>
                                         </div>
                                     </li>
                                     <li class="accordion-listing">
-                                        <h5 class="">
-                                            Additional Domains
+                                        <h5>
+                                            Connecting via SSH
                                         </h5>
                                         <div class="description">
-                                            <p>Additional Domains are most commonly used for WordPress Multisite
-                                                setups or if you have a multilingual site and are using subdomains
-                                                for each language. In those cases your site is configured to use
-                                                multiple domains and make use of them.</p>
-                                            <p>If you have .net and .org versions of your Primary Domain, you might
-                                                want to redirect them to your Primary Domain. And you might want the
-                                                www subdomain to redirect to your Primary Domain as well. In these
-                                                cases, enable redirection and they will be 301 redirected to the
-                                                Primary Domain.</p>
+                                            <p>Need to run commands on the server? Command line access is available via
+                                                SSH:</p>
+                                            <p>ssh bedrock@46.101.10.236</p>
+                                            <p>Here are the SSH apps we recommend:</p>
+                                            <ul>
+                                                <li>macOS - Terminal (included with macOS)</li>
+                                                <li>Windows - <a href="">PuTTY</a></li>
+                                                <li>Linux - you don’t need our help in this department :)</li>
+                                            </ul>
                                         </div>
                                     </li>
                                     <li class="accordion-listing">
-                                        <h5 class="">
-                                            PHP
+                                        <h5>
+                                            SSH Keys
                                         </h5>
                                         <div class="description">
-                                            <p>This is the PHP version that this site is currently running under.
-                                                You can change the PHP version at anytime without impacting other
-                                                sites hosted on the server. We recommend that you always use the
-                                                latest version available.</p>
-                                            <p>For WordPress sites you'll want to fully test your site after
-                                                changing this value, because some older plugins are not compatible
-                                                with newer versions of PHP.</p>
-                                        </div>
-                                    </li>
-                                    <li class="accordion-listing">
-                                        <h5 class="">
-                                            Basic Authentication
-                                        </h5>
-                                        <div class="description">
-                                            <p>Basic authentication is a simple method of password protecting a
-                                                site. It is commonly used to protect staging sites, or sites which
-                                                are not yet ready for public consumption.</p>
+                                            <p>Select the SSH keys that should be added to this user to allow remote
+                                                access. Note that SSH password authentication will be disabled while SSH
+                                                key authentication is active.</p>
                                         </div>
                                     </li>
                                 </ul>
@@ -910,9 +918,8 @@
                             <div class="doc-listing">
                                 <h3>Related Documentation</h3>
                                 <ul class="">
-                                    <li><a href="#">Changing the Primary Domain of a Site</a></li>
-                                    <li><a href="#">Redirects</a></li>
-                                    <li><a href="#">Why is my WordPress Site Not Loading?</a></li>
+                                    <li><a href="#">Understanding System Users</a></li>
+                                    <li><a href="#">Using SFTP to Connect to Your SpinupWP Servers</a></li>
                                 </ul>
                             </div>
                         </div>

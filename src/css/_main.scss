@@ -6,6 +6,18 @@ html {
 
 p {
   @apply font-pera text-base;
+
+}
+
+p,
+span {
+  a {
+    @apply text-primary-blue;
+
+    &:hover {
+      @apply underline;
+    }
+  }
 }
 
 button {
@@ -56,7 +68,7 @@ span {
 
 
 .btn {
-  @apply  text-base px-5 py-3.5 text-white rounded-round font-bold font-heading text-center;
+  @apply text-base px-5 py-3.5 text-white rounded-round font-bold font-heading text-center;
 
   &.btn-primary {
     @apply bg-primary-blue border-primary-blue;
@@ -103,15 +115,31 @@ span {
   &:focus {
     @apply outline-none border-primary-blue;
   }
+
+  &:disabled {
+    @apply bg-secondary-white-shade-5;
+  }
 }
+
+input[readonly="readonly"] {
+  @apply bg-secondary-white-shade-6 border-text-light;
+
+  &:focus {
+    @apply outline-none border-text-light;
+  }
+}
+
 .textareas {
   @apply min-h-150;
 }
+
 .select-dropdown-wrapper {
   @apply relative w-full;
+
   .select-dropdown {
-    @apply appearance-none ;
+    @apply appearance-none;
   }
+
   &::before {
     @apply bg-drop-down w-3 h-2 bg-100% bg-no-repeat content-[""] absolute right-3 top-50% translate-y-50%;
   }
@@ -120,7 +148,7 @@ span {
 
 .form-check,
 .form-radio {
-  @apply w-5 h-5 mr-1.5 font-heading;
+  @apply w-4 h-4 mr-1.5 font-heading;
 
   &:checked {
     @apply bg-primary-blue border-primary-blue appearance-none
@@ -152,7 +180,7 @@ span {
 
 .form-check,
 .form-toggle {
-  ~ label {
+  ~label {
     @apply mb-0;
   }
 }
@@ -487,12 +515,19 @@ span {
   @apply w-full overflow-x-auto;
 
   thead {
-    @apply bg-secondary-white-shade-2 border-b-1 border-text-light;
+    @apply bg-secondary-white-shade-1 border-b-1 border-text-light;
 
     tr {
       th {
-        @apply px-4 py-3 text-xs font-pera text-secondary-black-shade-6 font-semibold text-start;
+        @apply px-4 py-3 text-xs font-pera text-secondary-black-shade-6 font-semibold text-center;
 
+        &:first-child {
+          @apply text-start;
+        }
+
+        &:last-child {
+          @apply text-right;
+        }
       }
     }
   }
@@ -506,7 +541,31 @@ span {
       }
 
       td {
-        @apply p-4 text-sm text-secondary-black-shade-6 font-semibold;
+        @apply p-4 text-sm text-secondary-black-shade-6 font-semibold text-center;
+
+        &:first-child {
+          @apply text-start;
+        }
+
+        &:last-child {
+          @apply text-right;
+        }
+        a {
+          @apply text-primary-blue;
+        }
+        span {
+          @apply mr-3;
+          &:last-child {
+            @apply mr-0;
+          }
+          svg {
+            &:hover {
+              path {
+                @apply fill-primary-blue;
+              }
+            }
+          }
+        }
 
         .site-overview {
           @apply flex items-center justify-end;
@@ -536,13 +595,6 @@ span {
           }
         }
       }
-
-      .site-domain {
-        a {
-          @apply text-primary-blue;
-        }
-      }
-
       .site-status {
         a {
           @apply text-center;
@@ -645,20 +697,22 @@ span {
 }
 
 .site-details-cards {
-  @apply grid lg_gap-x-8 gap-0 py-10 xl_grid-cols-3 lg_grid-cols-2 grid-cols-1 ;
+  @apply grid lg_gap-x-8 gap-0 py-10 xl_grid-cols-3 lg_grid-cols-2 grid-cols-1;
 }
 
 .cards {
-  @apply bg-white border-1 border-text-light shadow-md  mb-8;
-  &.clickable  {
+  @apply bg-white border-1 border-text-light shadow-md mb-8;
+
+  &.clickable {
     @apply cursor-pointer;
   }
+
   &:hover {
     @apply shadow-lg;
   }
 
   .card-header {
-    @apply flex items-center p-4  border-b-1 border-text-light font-pera;
+    @apply flex items-center p-4 border-b-1 border-text-light font-pera;
 
     span {
       @apply text-lg;
@@ -666,6 +720,10 @@ span {
 
     img {
       @apply mr-4;
+    }
+
+    .select-dropdown-wrapper {
+      @apply mr-5;
     }
   }
 
@@ -721,11 +779,14 @@ span {
         }
       }
     }
+
     .card-img-wrapper {
       @apply flex items-center w-full flex-col p-12;
+
       img {
         @apply mb-6;
       }
+
       .body-text {
         @apply text-secondary-black-shade-6 font-normal text-xl mb-4;
       }
@@ -752,17 +813,19 @@ span {
     @apply flex items-center px-4 py-5 border-b-1 border-text-light font-pera;
   }
 }
+
 .event-filters {
   &.select-dropdown-wrapper {
     @apply w-auto;
   }
-} 
+}
 
 .site-detail-tables {
   .card-header {
     @apply justify-between;
   }
 }
+
 .site-sidebar {
   @apply xl_col-auto col-span-3;
 }
@@ -788,28 +851,46 @@ span {
           @apply content-[""] absolute right-0 bg-plus w-5 h-5 bg-100% bg-no-repeat top-50% translate-y-50% transition duration-700 ease-in-out;
         }
       }
+
       &.active-accordion {
         h5 {
           @apply text-primary-blue;
+
           &::before {
-            @apply rotate-45  duration-700 ease-in-out;
+            @apply rotate-45 duration-700 ease-in-out;
           }
         }
+
         .description {
-          @apply opacity-100 h-full transition-all  mt-6;
+          @apply opacity-100 h-full transition-all mt-6;
         }
       }
     }
 
     .description {
-      @apply opacity-0 h-0 transition-easy text-secondary-black-shade-6 ;
+      @apply opacity-0 h-0 transition-easy text-secondary-black-shade-6;
+
       p {
         @apply mb-4;
+
         &:last-child {
           @apply mb-0;
         }
+
         a {
           @apply text-primary-blue font-heading font-semibold;
+        }
+      }
+
+      ul {
+        @apply list-disc ps-8;
+
+        li {
+          @apply mb-2;
+
+          a {
+            @apply text-primary-blue font-heading font-semibold;
+          }
         }
       }
     }
@@ -826,6 +907,138 @@ span {
 
         &:hover {
           @apply underline;
+        }
+      }
+    }
+  }
+}
+
+.tabs-section {
+  .fill-tabs {
+    @apply inline-flex shadow-md border-text-light border-1 mb-6;
+
+    li {
+      @apply p-3 text-base font-semibold text-secondary-black-shade-6 border-r-1;
+
+      &:last-child {
+        @apply border-r-0;
+      }
+
+      &.active-tab {
+        @apply bg-primary-blue-shade-3 border-primary-blue-shade-3 text-white;
+      }
+    }
+  }
+
+  .content-section {
+    .content {
+      @apply hidden opacity-0 animate-hide-show;
+
+      &.active-tab {
+        @apply block opacity-100;
+      }
+
+      .mulitple-checkox-wrap {
+        .multi-checkbox {
+          @apply pt-4 px-4 border-1 border-text-light mb-2;
+
+          ul {
+            @apply flex flex-wrap;
+
+            li {
+              @apply mr-4 mb-4 p-2 bg-secondary-50 border-1 border-text-light rounded-md flex items-center;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.heading {
+  @apply flex items-center justify-between w-full mb-4;
+
+  label {
+    @apply mb-0;
+  }
+
+  a {
+    @apply font-semibold text-primary-blue;
+
+    &:hover {
+      @apply underline;
+    }
+  }
+}
+
+.logs-inout-grouping {
+  .search-icon {
+    @apply border-secondary-black-shade-6;
+
+    svg {
+      @apply w-6 h-6;
+    }
+  }
+}
+
+.refresh-wrapper {
+  svg {
+    @apply w-6 h-6;
+  }
+}
+
+.input-grouping {
+  input {
+    @apply pr-24;
+  }
+
+  &.logs-inout-grouping {
+    @apply min-w-600 mx-5;
+  }
+}
+
+.dark-mode {
+  @apply bg-black text-white;
+}
+
+.logs-viewer {
+  @apply p-6 max-h-600 overflow-y-auto;
+
+  p {
+    @apply mb-4;
+  }
+
+  &::-webkit-scrollbar-track {
+    @apply shadow-scroll-shadow rounded-lg bg-secondary-white-shade-2;
+  }
+
+  &::-webkit-scrollbar {
+    @apply w-3 bg-secondary-white-shade-2;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    @apply rounded-lg shadow-scroll-shadow bg-secondary-black-shade-6;
+  }
+}
+
+.logs-body {
+  @apply p-4 mt-3;
+}
+
+.action-column {
+  span {
+    @apply mr-3;
+
+    &:last-child {
+      @apply mr-0;
+    }
+
+    svg {
+      @apply w-6 h-6;
+
+      &:hover {
+        path {
+          @apply fill-primary-blue;
         }
       }
     }

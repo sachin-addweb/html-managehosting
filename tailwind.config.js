@@ -139,6 +139,7 @@ module.exports = {
         'shadow-mobile': '2 px 2 px 4 px rgba(157, 161, 164, 0.2)',
         'shadow-raised-hover': '0 5 px 10 px rgba(0, 0, 0, 0.1)',
         'shadow-toggle': '0 0 2 px rgba(0, 0, 0, 0.1)',
+        'scroll-shadow' : 'inset 0 0 6px rgba(0, 0, 0, 0.3)',
       },
       borderRadius: {
         'round': '10px 0',
@@ -148,6 +149,7 @@ module.exports = {
         '120': '120px',
         '200': '200px',
         '400' : '400px',
+        '600' : '600px',
       },
       maxWidth: {
         '200': '200px',
@@ -160,12 +162,14 @@ module.exports = {
       },
       minHeight: {
         '150' : '150px',
+        '600' : '600px',
       },
       spacing : {
         '300' : '300px',
         '54': '235px',
         '500' : '500px',
         '50%' : '-50%',
+        '600' : '600px',
       },
       transitionProperty: {
         easy: ".3s ease-in-out",
@@ -188,6 +192,16 @@ module.exports = {
       },
       position: {
         'unset' : 'unset'
+      },
+      animation: {
+        'hide-show': 'hide-show 1s ease',
+      },
+      keyframes: {
+        'hide-show': {
+          '0%': { display: 'none' , opacity: '0' },
+          '1%': { display: 'block' },
+          '100%' : {opacity: '1'},
+        }
       },
     },
   },

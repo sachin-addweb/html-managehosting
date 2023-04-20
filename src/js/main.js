@@ -64,7 +64,7 @@ window.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  if (document.body.contains(document.querySelector('.faqs')))  {
+  if (document.body.contains(document.querySelector('.faqs'))) {
 
     function toggleItem(elem) {
       for (var i = 0; i < elem.length; i++) {
@@ -84,7 +84,8 @@ window.addEventListener("DOMContentLoaded", () => {
       };
     }
     toggleItem(document.querySelectorAll('.accordion-listing'));
-        function toggleItem(elem) {
+
+    function toggleItem(elem) {
       for (var i = 0; i < elem.length; i++) {
         elem[i].addEventListener("click", function (e) {
           var current = this;
@@ -102,6 +103,33 @@ window.addEventListener("DOMContentLoaded", () => {
       };
     }
     toggleItem(document.querySelectorAll('accordion-listing'));
+  }
+
+  if (document.body.contains(document.querySelector('.tabs-section'))) {
+    (function () {
+      var d = document,
+        tabs = d.querySelector('.tabs-section .tabs'),
+        tab = d.querySelectorAll('.tabs-section li'),
+        contents = d.querySelectorAll('.tabs-section .content');
+      tabs.addEventListener('click', function (e) {
+        if (e.target && e.target.nodeName === 'LI') {
+          // change tabs
+          for (var i = 0; i < tab.length; i++) {
+            tab[i].classList.remove('active-tab');
+          }
+          e.target.classList.toggle('active-tab');
+
+
+          // change content
+          for (i = 0; i < contents.length; i++) {
+            contents[i].classList.remove('active-tab');
+          }
+
+          var tabId = '#' + e.target.dataset.tabId;
+          d.querySelector(tabId).classList.toggle('active-tab');
+        }
+      });
+    })();
   }
 
 });
