@@ -1,6 +1,6 @@
 # Gulp with TailwindCSS Starter Kit
 
-Gulp with TailwindCSS v3 Starter Kit ( ~~Updated with [TailwindCSS JIT](https://github.com/tailwindlabs/tailwindcss-jit)~~ - **latest tailwind has JIT is built-in** ) - A repo that makes your development easier with predefined gulp tasks that help you to use [tailwindcss](https://github.com/tailwindcss/tailwindcss) with simple commands.
+Gulp with TailwindCSS v3 Starter Kit
 
 ## Features
 
@@ -10,11 +10,6 @@ Gulp with TailwindCSS v3 Starter Kit ( ~~Updated with [TailwindCSS JIT](https://
 - Minification of styles and scripts on production build
 - Minification of images on production build using `imagemin`
 - Includes following tailwindcss plugins (can be disabled/enabled with `config.js`)
-
-  - [@tailwindcss/forms](https://github.com/tailwindlabs/tailwindcss-forms)
-  - ~~[@tailwindcss/line-clamp](https://github.com/tailwindlabs/tailwindcss-line-clamp)~~ - Utility is included by default in Tailwind v3.3 release
-  - [@tailwindcss/typography](https://tailwindcss.com/docs/typography-plugin)
-  - [@tailwindcss/container-queries](https://github.com/tailwindlabs/tailwindcss-container-queries)
 
 ## Quick Start
 
