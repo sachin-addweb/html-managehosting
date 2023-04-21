@@ -744,99 +744,37 @@
                         <div class="col-span-2">
                             <div class="cards">
                                 <div class="card-header">
-                                    <span>Site User</span>
+                                    <span>HTTPS</span>
                                 </div>
                                 <div class="card-body">
                                     <form action="" class="form-wrapper py-8 px-5">
-                                        <div class="grid md_grid-cols-2 grid-cols-1 gap-6">
-                                            <div class="mb-6 w-full md:w-full flex items-end">
-                                                <div class="w-full">
-                                                    <label for="">
-                                                        Username</label>
-                                                    <input type="text" name="" value="" autofocus="autofocus"
-                                                        class="form-controls" readonly="readonly" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="mb-6 w-full md:w-full">
-                                            <div class="tabs-section">
-                                                <nav>
-                                                    <ul class='tabs fill-tabs'>
-                                                        <li class='active-tab' data-tab-id='tab1'>Public Key</li>
-                                                        <li data-tab-id='tab2'>Password</li>
-                                                    </ul>
-                                                </nav>
-                                                <div class='content-section fill-tabs-content'>
-                                                    <div id='tab1' class='content active-tab'>
-                                                        <div class="mulitple-checkox-wrap">
-                                                            <div class="heading">
-                                                                <label for="">Select SSH Keys</label>
-                                                                <button class="btn btn-outline">Add SSH Key</button>
-                                                            </div>
-                                                            <div class="multi-checkbox">
-                                                                <ul>
-                                                                    <li>
-                                                                        <input type="checkbox" name="" id=""
-                                                                            class="form-check">
-                                                                        <label for="">Jaimin</label>
-                                                                    </li>
-                                                                    <li>
-                                                                        <input type="checkbox" name="" id=""
-                                                                            class="form-check">
-                                                                        <label for="">aedu</label>
-                                                                    </li>
-                                                                    <li>
-                                                                        <input type="checkbox" name="" id=""
-                                                                            class="form-check">
-                                                                        <label for="">addwebprojects</label>
-                                                                    </li>
-                                                                    <li>
-                                                                        <input type="checkbox" name="" id=""
-                                                                            class="form-check">
-                                                                        <label for="">gowithflow</label>
-                                                                    </li>
-                                                                    <li>
-                                                                        <input type="checkbox" name="" id=""
-                                                                            class="form-check">
-                                                                        <label for="">Jenkins-Server</label>
-                                                                    </li>
-                                                                    <li>
-                                                                        <input type="checkbox" name="" id=""
-                                                                            class="form-check">
-                                                                        <label for="">lp-96</label>
-                                                                    </li>
-                                                                    <li>
-                                                                        <input type="checkbox" name="" id=""
-                                                                            class="form-check">
-                                                                        <label for="">gowithflow</label>
-                                                                    </li>
-                                                                    <li>
-                                                                        <input type="checkbox" name="" id=""
-                                                                            class="form-check">
-                                                                        <label for="">Jenkins-Server</label>
-                                                                    </li>
-                                                                    <li>
-                                                                        <input type="checkbox" name="" id=""
-                                                                            class="form-check">
-                                                                        <label for="">lp-96</label>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                            <span>
-                                                                Each SSH key is saved to your account.<a
-                                                                    href="">manage</a>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                    <div id='tab2' class='content'>
-                                                        <div class="w-full">
-                                                            <label for="">
-                                                                Password</label>
-                                                            <input type="password" name="" value=""
-                                                                autofocus="autofocus" class="form-controls" />
-                                                        </div>
+                                        <div class="mb-6 w-xfull md:w-full">
+                                            <div class="radio-toggle">
+                                                <label><input type="radio" name="content" value="option1" class="radio-button form-radio" checked>SpinupWP will issue and manage a free certificate</label>
+                                                <label><input type="radio" name="content" value="option2" class="radio-button form-radio">I will provide the certificate and manage it myself
+                                                </label>
+                                                <div id="option1-content" class="content-visible">
+                                                    <div class="card-img-wrapper">
+                                                        <img src="./img/redirect-path.svg" alt="" width="" height="">
+                                                        <h4 class="body-text">Your site doesn't have any path redirects yet.</h4>
+                                                        <button class="btn btn-primary">Add Path Redirect</button>
                                                     </div>
                                                 </div>
+                                                <div id="option2-content" class="content-visible">
+                                                    <div class="w-full mb-6">
+                                                        <label for="">
+                                                            Certificate</label>
+                                                        <input type="text" name="" value=""
+                                                            autofocus="autofocus" class="form-controls" placeholder="/etc/nginx/ssl/bedrock.addwebprojects.com/fullchain.pem" />
+                                                    </div> 
+                                                    <div class="w-full mb-6">
+                                                        <label for="">
+                                                            Private Key</label>
+                                                        <input type="password" name="" value=""
+                                                            autofocus="autofocus" class="form-controls" placeholder="/etc/nginx/ssl/bedrock.addwebprojects.com/privkey.pem"/>
+                                                    </div> 
+                                                </div>
+                                                
                                             </div>
                                         </div>
                                         <div class="w-full md:w-full flex justify-end">
@@ -852,65 +790,22 @@
                                 <ul class="accordion">
                                     <li class="accordion-listing">
                                         <h5>
-                                            Site User
+                                            HTTPS
                                         </h5>
                                         <div class="description">
-                                            <p>Sites deployed via SpinupWP are owned by a unique system user, known as a
-                                                site user. Site users can SSH and SFTP to the server, but they will be
-                                                restricted to the site's directory. When making changes to a site, or
-                                                running WP CLI the site user should be used. Find out more about<a
-                                                    href="">site users</a>.</p>
-                                        </div>
-                                    </li>
-                                    <li class="accordion-listing">
-                                        <h5>
-                                            Connecting via SFTP
-                                        </h5>
-                                        <div class="description">
-                                            <p>If you’d like to upload files to your server, you can connect securely
-                                                via SFTP.</p>
-                                            <p>Your site is owned by the <span class="italic">bedrock</span>user and can
-                                                be accessed using SFTP with the following connection information:</p>
-                                            <ul>
-                                                <li>Server: 46.101.10.236</li>
-                                                <li>Port: 22</li>
-                                                <li>Username: bedrock</li>
-                                                <li>Password: For SSH key authentication leave this blank (or select
-                                                    your SSH Key if allowed). For SSH password authentication enter your
-                                                    SSH password.</li>
-                                            </ul>
-                                            <p>The most convenient way to access and manage your files is using a
-                                                desktop SFTP client. Here are the apps we recommend:</p>
-                                            <ul>
-                                                <li>macOS -<a href="">Transmit</a></li>
-                                                <li>Windows & Linux <a href="">Filezilla</a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="accordion-listing">
-                                        <h5>
-                                            Connecting via SSH
-                                        </h5>
-                                        <div class="description">
-                                            <p>Need to run commands on the server? Command line access is available via
-                                                SSH:</p>
-                                            <p>ssh bedrock@46.101.10.236</p>
-                                            <p>Here are the SSH apps we recommend:</p>
-                                            <ul>
-                                                <li>macOS - Terminal (included with macOS)</li>
-                                                <li>Windows - <a href="">PuTTY</a></li>
-                                                <li>Linux - you don’t need our help in this department :)</li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="accordion-listing">
-                                        <h5>
-                                            SSH Keys
-                                        </h5>
-                                        <div class="description">
-                                            <p>Select the SSH keys that should be added to this user to allow remote
-                                                access. Note that SSH password authentication will be disabled while SSH
-                                                key authentication is active.</p>
+                                            <p>
+                                                Turning this on will secure your site by configuring Nginx to serve
+                                                traffic over HTTPS. Regular HTTP traffic will be redirected to HTTPS.
+                                                HTTP/2 will also be configured, which will improve the performance of
+                                                your site.</p>
+                                            <p>You can choose between a free Let's Encrypt certificate, which will be
+                                                generated and then renewed every 45 days automatically. Or, <a
+                                                    href="">install a custom certificate</a>, which must be uploaded to
+                                                the server and renewed manually.</p>
+                                            <p>We recommend that all sites use HTTPS. Not only will it improve the
+                                                security of your site, but it can also help with SEO since HTTPS is used
+                                                as a ranking signal. Note that some browsers will even flag sites as
+                                                “Not secure” if they don’t use HTTPS.</p>
                                         </div>
                                     </li>
                                 </ul>
@@ -918,8 +813,9 @@
                             <div class="doc-listing">
                                 <h3>Related Documentation</h3>
                                 <ul class="">
-                                    <li><a href="#">Understanding System Users</a></li>
-                                    <li><a href="#">Using SFTP to Connect to Your SpinupWP Servers</a></li>
+                                    <li><a href="#">Common Reasons Certificate Renewals Fail</a></li>
+                                    <li><a href="#">Custom HTTPS Certificate</a></li>
+                                    <li><a href="#">Troubleshooting Cloudflare Issues</a></li>
                                 </ul>
                             </div>
                         </div>
