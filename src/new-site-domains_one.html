@@ -693,63 +693,19 @@
                         <div class="col-span-2">
                             <div class="cards ">
                                 <div class="card-header">
-                                    <span>New Site</span>
+                                    <span>New Site (spinup.addwebprojects.com)</span>
                                 </div>
                                 <div class="card-body">
                                     <form action="" class="form-wrapper py-8 px-5">
-                                            <div class="mb-6 w-full md:w-full">
-                                                <div class="w-full">
-                                                    <label for="">Primary Domain</label>
-                                                    <input type="text" name="" value="" autofocus="autofocus"
-                                                        class="form-controls input-field" placeholder="example.com or subdomain.example.com"/>
-                                                </div>
-                                            </div>
-                                            <div class="mb-6 w-full md:w-full">
-                                                <label for="">Additional Domains</label>
-                                                <div class="flex items-center">
-                                                    <div class="input-grouping relative w-full">
-                                                        <input type="text" name="" value="" autofocus="autofocus"
-                                                            class="form-controls input-field" placeholder="www.example.com" />
-                                                        <button class="btn btn-outline absolute right-2 top-50% translate-y-50%">
-                                                            <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path d="M11 3.73334V0L18 6.53333L11 13.0667V9.23999C6 9.23999 2.5 10.7333 0 14C1 9.33333 4 4.66667 11 3.73334Z" fill="#03588C"/>
-                                                                </svg>
-                                                                
-                                                        </button>
-                                                    </div>
-                                                    <div class="close-btn ms-4">
-                                                        <img src="./img/close-menu.svg" alt="" width="16" height="16">
-                                                    </div>
-                                                </div>
-                                                <div class="domain mt-4">
-                                                    <button class="btn btn-outline">+ Add Domain</button>
-                                                </div>
-                                            </div>
                                             <div class="mb-6 w-xfull md:w-full">
-                                                <label for="">Enable HTTPS (SSL/TLS certificates)
-                                                </label>
-                                                <div class="radio-toggle">
-                                                    <label><input type="radio" name="content" value="option1" class="radio-button form-radio" checked>SpinupWP will issue and manage a free certificate</label>
-                                                    <label><input type="radio" name="content" value="option2" class="radio-button form-radio">I will provide the certificate and manage it myself
-                                                    </label>
-                                                    <div id="option1-content" class="content-visible">
-                                                    </div>
-                                                    <div id="option2-content" class="content-visible">
-                                                        <div class="w-full mb-6">
-                                                            <label for="">
-                                                                Certificate</label>
-                                                            <input type="text" name="" value=""
-                                                                autofocus="autofocus" class="form-controls" placeholder="/etc/nginx/ssl/bedrock.addwebprojects.com/fullchain.pem" />
-                                                        </div> 
-                                                        <div class="w-full mb-6">
-                                                            <label for="">
-                                                                Private Key</label>
-                                                            <input type="password" name="" value=""
-                                                                autofocus="autofocus" class="form-controls" placeholder="/etc/nginx/ssl/bedrock.addwebprojects.com/privkey.pem"/>
-                                                        </div> 
-                                                    </div>
-                                                    
+                                                <span class="mb-3">Are you ready to point your domains at this server?
+                                                </span>
+                                                <div class="radio-toggle mb-6">
+                                                    <label><input type="radio" name="content" value="option1" class="radio-button form-radio" checked>Yes, I'll update my DNS to point the domains at this server</label>
+                                                    <label><input type="radio" name="content" value="option2" class="radio-button form-radio">No, I'd like to add TXT records to my DNS for now
+                                                    </label>                                                   
                                                 </div>
+                                                <span>If you'd like to skip updating your DNS entirely, go back and disable HTTPS.</span>
                                             </div>
                                             <div class="w-full md:w-full flex justify-between">
                                                 <button class="btn btn-disabled">Back</button>
@@ -763,47 +719,10 @@
                             <div class="faqs">
                                 <h3>Helpful Hints</h3>
                                 <ul class="accordion">
-                                    <li class="accordion-listing">
-                                        <h5 >
-                                            Domains
-                                        </h5>
+                                    <li class="accordion-listing active-accordion">
                                         <div class="description">
-                                            <p>The most common configuration here is to enter a Primary Domain like example.com and enter www.example.com in the Additional Domains. The Primary Domain and Additional Domains are the domains that the site is set up to work with. In the Nginx config server block for this site, these are added to the <span class="italic">server_name</span> directive. Any redirected domains will have their own server blocks and will be 301 redirected to the Primary Domain.</p>
-                                        </div>
-                                    </li>
-                                    <li class="accordion-listing">
-                                        <h5 class="">
-                                            Primary Domain
-                                        </h5>
-                                        <div class="description">
-                                            <p>A site may be set up to work with multiple domain names (e.g. WordPress multisite), but the Primary Domain is used as the name of the site in SpinupWP and on your server. It will show up in your list of sites in SpinupWP and will be used as the name of folders and config files on your server. It's common to enter example.com here and then add www.example.com in the list of Additional Domains. You can change the Primary Domain later.
-                                            </p>
-                                        </div>
-                                    </li>
-                                    <li class="accordion-listing">
-                                        <h5 class="">
-                                            Additional Domains
-                                        </h5>
-                                        <div class="description">
-                                            <p>Additional Domains are most commonly used for WordPress Multisite
-                                                setups or if you have a multilingual site and are using subdomains
-                                                for each language. In those cases your site is configured to use
-                                                multiple domains and make use of them.</p>
-                                            <p>If you have .net and .org versions of your Primary Domain, you might
-                                                want to redirect them to your Primary Domain. And you might want the
-                                                www subdomain to redirect to your Primary Domain as well. In these
-                                                cases, enable redirection and they will be 301 redirected to the
-                                                Primary Domain.</p>
-                                        </div>
-                                    </li>
-                                    <li class="accordion-listing">
-                                        <h5 class="">
-                                            HTTPS
-                                        </h5>
-                                        <div class="description">
-                                            <p>Turning this on will secure your site by configuring Nginx to serve traffic over HTTPS. Regular HTTP traffic will be redirected to HTTPS. HTTP/2 will also be configured, which will improve the performance of your site.</p>
-                                            <p>You can choose between a free Let's Encrypt certificate, which will be generated and then renewed every 45 days automatically. Or, <a href=""> install a custom certificate</a>, which must be uploaded to the server and renewed manually.</p>
-                                            <p>We recommend that all sites use HTTPS. Not only will it improve the security of your site, but it can also help with SEO since HTTPS is used as a ranking signal. Note that some browsers will even flag sites as "Not secure" if they don’t use HTTPS.</p>
+                                            <p>In order to issue a free SSL/TLS certificate for HTTPS, you have to verify ownership of your domains. The easiest way is to update your DNS to point your domains at this server. This is know as "webroot verification."</p>
+                                            <p>If you're not ready for this server to handle requests for your domains yet (maybe you're migrating a site from another server, for example) we can provide you with TXT records to add to your DNS instead. When we need to renew your certificate for the first time, we'll use webroot verification.</p>
                                         </div>
                                     </li>
                                 </ul>
