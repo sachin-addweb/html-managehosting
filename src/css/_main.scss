@@ -81,7 +81,7 @@ span {
 
 
 .btn {
-  @apply text-base px-5 py-3.5 text-white rounded-round font-bold font-heading text-center;
+  @apply text-base px-5 py-3.5 text-white rounded-md font-bold font-heading text-center min-w-120;
 
   &.btn-primary {
     @apply bg-primary-blue border-primary-blue;
@@ -105,6 +105,9 @@ span {
     &:hover {
       @apply shadow-md
     }
+  }
+  &.btn-disabled {
+    @apply bg-secondary-white-shade-3 text-secondary-black-shade-6;
   }
 }
 
@@ -728,6 +731,9 @@ input[readonly="readonly"] {
     }
   }
 }
+.without-inner-header {
+  @apply w-full py-12;
+}
 
 .site-details-cards {
   @apply grid lg_gap-x-8 gap-0 py-10 xl_grid-cols-3 lg_grid-cols-2 grid-cols-1;
@@ -1027,6 +1033,9 @@ input[readonly="readonly"] {
 
   &.logs-inout-grouping {
     @apply min-w-600 mx-5;
+  }
+  .btn {
+    @apply min-w-unset;
   }
 }
 

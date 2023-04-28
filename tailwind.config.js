@@ -149,6 +149,7 @@ module.exports = {
         '200': '200px',
         '400' : '400px',
         '600' : '600px',
+        'unset' : 'unset',
       },
       maxWidth: {
         '200': '200px',
