@@ -50,18 +50,24 @@ window.addEventListener("DOMContentLoaded", () => {
     eventButtons.forEach((button, index) => {
       button.addEventListener('click', (e) => {
         e.preventDefault();
-        openMenu[index].classList.toggle('expanded-isting-dropdown');
+        openMenu.forEach(openDiv => {
+          if (openDiv.classList.contains('expanded-listing-dropdown') && openDiv !== openMenu[index]) {
+            openDiv.classList.remove('expanded-listing-dropdown');
+          }
+        });
+        openMenu[index].classList.toggle('expanded-listing-dropdown');
         e.stopPropagation();
       });
     });
 
     document.addEventListener('click', (event) => {
       openMenu.forEach(openDiv => {
-        if (openDiv.classList.contains('expanded-isting-dropdown') && !openDiv.contains(event.target)) {
-          openDiv.classList.remove('expanded-isting-dropdown');
+        if (openDiv.classList.contains('expanded-listing-dropdown') && !openDiv.contains(event.target)) {
+          openDiv.classList.remove('expanded-listing-dropdown');
         }
       });
     });
+
   }
 
   if (document.body.contains(document.querySelector('.faqs'))) {
@@ -85,51 +91,31 @@ window.addEventListener("DOMContentLoaded", () => {
     }
     toggleItem(document.querySelectorAll('.accordion-listing'));
 
-    function toggleItem(elem) {
-      for (var i = 0; i < elem.length; i++) {
-        elem[i].addEventListener("click", function (e) {
-          var current = this;
-          for (var i = 0; i < elem.length; i++) {
-            if (current != elem[i]) {
-              elem[i].classList.remove('active-accordion');
-            } else if (current.classList.contains('active-accordion') === true) {
-              current.classList.remove('active-accordion');
-            } else {
-              current.classList.add('active-accordion')
-            }
-          }
-          e.preventDefault();
+
+    // Get all the input fields and accordions
+  }
+
+  if (document.body.contains(document.querySelector('.radio-toggle'))) {
+    const radioButtons = document.querySelectorAll('.radio-toggle .radio-button');
+
+    // Show the content for the initially selected radio button
+    const initialValue = document.querySelector('.radio-button:checked').value;
+    document.getElementById(initialValue + '-content').style.display = 'block';
+    document.getElementById(initialValue + '-content').classList.add('active-content');
+    radioButtons.forEach(function (radioButton) {
+      radioButton.addEventListener('click', function () {
+        const value = this.value;
+        const content = document.getElementById(value + '-content');
+        const contents = document.querySelectorAll('.content-visible');
+        contents.forEach(function (c) {
+          c.style.display = 'none';
+          c.classList.remove("active-content");
         });
-      };
-    }
-    toggleItem(document.querySelectorAll('accordion-listing'));
-  }
-
-  if (document.body.contains(document.querySelector('.tabs-section'))) {
-    (function () {
-      var d = document,
-        tabs = d.querySelector('.tabs-section .tabs'),
-        tab = d.querySelectorAll('.tabs-section li'),
-        contents = d.querySelectorAll('.tabs-section .content');
-      tabs.addEventListener('click', function (e) {
-        if (e.target && e.target.nodeName === 'LI') {
-          // change tabs
-          for (var i = 0; i < tab.length; i++) {
-            tab[i].classList.remove('active-tab');
-          }
-          e.target.classList.toggle('active-tab');
-
-
-          // change content
-          for (i = 0; i < contents.length; i++) {
-            contents[i].classList.remove('active-tab');
-          }
-
-          var tabId = '#' + e.target.dataset.tabId;
-          d.querySelector(tabId).classList.toggle('active-tab');
-        }
+        content.style.display = 'block';
+        content.classList.add("active-content");
       });
-    })();
+    });
   }
+
 
 });

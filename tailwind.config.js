@@ -102,7 +102,6 @@ module.exports = {
           'white-shade-7': '#efefef',
           'white-shade-8': '#d6d6d6',
           'white-shade-9': '#F2F2F2',
-
         },
         ternary: {
           white: '#f8f8fe',
@@ -150,6 +149,7 @@ module.exports = {
         '200': '200px',
         '400' : '400px',
         '600' : '600px',
+        'unset' : 'unset',
       },
       maxWidth: {
         '200': '200px',
